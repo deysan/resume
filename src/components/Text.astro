@@ -1,0 +1,25 @@
+---
+interface Props extends TextProps {}
+
+const { size = 'md', color = 'inherit', uppercase, customClass } = Astro.props;
+
+const sizeClasses = {
+  sm: 'text-xs',
+  md: 'text-base',
+  lg: 'text-xl font-semibold',
+  xl: 'text-4xl font-medium',
+}[size];
+
+const colorClasses = {
+  'white': 'text-white',
+  'black': 'text-black',
+  'blue': 'text-blue-700',
+  'inherit': 'text-inherit',
+}[color];
+
+const classes = `${uppercase ? 'uppercase' : ''} ${customClass}`.trim();
+---
+
+<p class=`${sizeClasses} ${colorClasses} ${classes}`>
+  <slot/>
+</p>

@@ -1,0 +1,29 @@
+---
+import Text from './Text.astro';
+
+interface Props extends TextProps{
+  title: string;
+  color?: 'black' | 'white' |  'blue';
+  withIcon?: boolean;
+}
+
+const { title, color = 'black', withIcon, size = 'md', uppercase } = Astro.props;
+
+const colorClass = {
+  black: 'bg-black text-white border-white',
+  white: 'bg-white text-black border-black',
+  blue: 'bg-blue-700 text-white border-white',
+}[color];
+
+const sizeClass = {
+  sm: 'px-2 py-1',
+  md: 'px-2.5 py-1.5',
+  lg: 'px-3 py-2.5',
+  xl: 'px-4 py-2.5',
+}[size];
+---
+
+<div class=`flex items-center gap-2 rounded-full border ${colorClass} ${sizeClass}`>
+  {withIcon && <span class='p-1 w-7 h-7 rounded-full bg-black group-hover:bg-blue-500 *:fill-white'><slot/></span>}
+  <Text size={size} uppercase={uppercase}>{title}</Text>
+</div>

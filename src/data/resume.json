@@ -1,0 +1,104 @@
+{
+  "about": {
+    "photo": "link_to_photo",
+    "name": "Andrii Deisan",
+    "position": "Frontend Developer",
+    "email": "ideysan@gmail.com",
+    "phone": "+380976246497",
+    "city": "Kyiv",
+    "summary": "A front-end developer with commercial experience in web applications development.  Good knowledge of JavaScript, React, HTML & CSS. Practical experience of development from layout to release in a product company. Strong at taking responsibility for my work results, appreciative of feedback, adaptable to business environments changes, keeping productivity and effectiveness on the same level."
+  },
+  "work_experience": [
+    {
+      "job_title": "Frontend Developer (React)",
+      "company": "Memcrab",
+      "start_date": "September 2022",
+      "end_date": "Present",
+      "city": "Vinnytsya",
+      "description": "SSR"
+    },
+    {
+      "job_title": "Frontend Developer (React)",
+      "company": "HolyWater at Genesis",
+      "start_date": "January 2022",
+      "end_date": "May 2022",
+      "city": "Ukraine",
+      "description": "Created interactive user interfaces in React and Typescript with the help of state managers Redux Toolkit and Effector; a tool for working with forms – Formik; for stylization – CSS Modules and a component library Chakra UI; for requests from the server – Apollo GraphQL; for working with REST API – fetch/axios; the architectural methodology of Feature-Sliced Design; for task planning – Asana."
+    },
+    {
+      "job_title": "Video project manager",
+      "company": "Network of dental clinics “Lumi-Dent”",
+      "start_date": "February 2019",
+      "end_date": "August 2021",
+      "city": "Kyiv",
+      "description": "Filming and editing of video materials; writing of scripts for the videos; working with light and sound equipment; launching videos; managing videos at various stages of post-production; knowing how to use keywords; tracking post assets: thumbnails, captions, etc.; implementing advanced knowledge of Adobe post-production; using various codecs, luts, standard post processes; maintaining channel quality, organization, and content governance."
+    },
+    {
+      "job_title": "Content manager",
+      "company": "Network of dental clinics “Lumi-Dent”",
+      "start_date": "March 2018",
+      "end_date": "January 2019",
+      "city": "Kyiv",
+      "description": "Site administration; content creating, managing and editing; photo and video editing; using SEO knowledge for content optimization; content localization; working with CRM system."
+    },
+    {
+      "job_title": "Internet Marketing",
+      "company": "Freelance",
+      "start_date": "2016",
+      "end_date": "2018",
+      "city": "Online",
+      "description": "Social media marketing; setting up advertisement campaigns; forum moderation and support."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Frontend Developer",
+      "degree": "Online Course",
+      "start_date": "September 2021",
+      "end_date": "January 2022",
+      "city": "Online",
+      "description": ""
+    },
+    {
+      "institution": "HTML Academy",
+      "degree": "Online Frontend Developer",
+      "start_date": "August 2018",
+      "end_date": "January 2019",
+      "city": "Online",
+      "description": "HTML, CSS, JavaScript – Successfully graduated and presented the final project. Certificate: https://htmlacademy.ru/profile/deysan/certificates"
+    },
+    {
+      "institution": "NTUU “Igor Sikorsky Kyiv Polytechnic Institute”",
+      "degree": "Master of Arts",
+      "start_date": "September 2010",
+      "end_date": "February 2016",
+      "city": "Kyiv",
+      "description": "Chemical engineering faculty."
+    }
+  ],
+  "social_profiles": [
+    {
+      "label": "GitHub @deysan",
+      "link": "https://github.com/deysan"
+    },
+    {
+      "label": "Telegram @deysan",
+      "link": "https://t.me/deysan"
+    },
+    {
+      "label": "Linkedin.com/in/deysan",
+      "link": "https://www.linkedin.com/in/deysan/"
+    }
+  ],
+  "hard_skills": [
+    "React",
+    "JavaScript",
+    "Typescript",
+    "HTML & CSS",
+    "Firebase",
+    "CI/CD",
+    "Git",
+    "English (Intermediate)"
+  ],
+  "soft_skills": ["Skill 1", "Skill 2", "Skill 3"]
+}

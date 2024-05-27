@@ -1,0 +1,18 @@
+---
+interface Props {
+  color?: 'blue' | 'white' | 'dark' | 'light'
+}
+
+const { color ='light' } = Astro.props;
+
+const colorClass = {
+  'blue': 'bg-blue-700 text-white',
+  'white': 'bg-white text-black',
+  'dark': 'bg-gray-900 text-white',
+  'light': 'bg-blue-100 text-black'
+}[color]
+---
+
+<div class=`p-4 rounded-2xl ${colorClass}`>
+  <slot/>
+</div>

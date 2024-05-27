@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Text from '../components/Text.astro';
+import Badge from '../components/Badge.astro';
+import Section from '../components/Section.astro';
+import resume from '../data/resume.json'
+---
+
+<Layout>
+	<main class="flex flex-col gap-6">
+    <section>
+      <Card color="white">
+        <Text size="lg" uppercase>
+          Hello! My name is Andrii Deisan. I can do some great things for you.
+        </Text>
+      </Card>
+    </section>
+
+    <h1 class="text-white uppercase text-6xl">
+      Andrii Deisan
+    </h1>
+
+    <Section type="flex">
+      <Badge title='Frontend Developer' color="white" size="lg" withIcon>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9c0-3.87 3.13-7 7-7s7 3.13 7 7c0 4.17-4.42 9.92-6.23 12.11-.4.48-1.13.48-1.53 0C9.42 18.92 5 13.17 5 9Zm4.5 0a2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0-5 0Z"></path></svg>
+      </Badge>
+      <Badge title='Frontend Developer' color="white" size="lg" withIcon>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.23 15.26-2.54-.29a1.99 1.99 0 0 0-1.64.57l-1.84 1.84a15.045 15.045 0 0 1-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52a2.001 2.001 0 0 0-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98Z"></path></svg></Badge>
+
+      <Badge title='Frontend Developer' color="white" size="lg" withIcon>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2l.01-12c0-1.1.89-2 1.99-2Zm8.53 8.67 7.07-4.42a.85.85 0 1 0-.9-1.44L12 11 5.3 6.81a.85.85 0 1 0-.9 1.44l7.07 4.42c.32.2.74.2 1.06 0Z"></path></svg>
+      </Badge>
+      <Badge title='Frontend Developer' color="white" size="lg" withIcon>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m3.4 20.4 17.45-7.48a1 1 0 0 0 0-1.84L3.4 3.6a.993.993 0 0 0-1.39.91L2 9.12c0 .5.37.93.87.99L17 12 2.87 13.88c-.5.07-.87.5-.87 1l.01 4.61c0 .71.73 1.2 1.39.91Z"></path></svg>
+      </Badge>
+      <a href="" class="group cursor-pointer rounded-full hover:shadow-lg hover:shadow-blue-500 *:hover:underline *:hover:underline-offset-4 *:hover:text-blue-500"><Badge title='Frontend Developer' color="white" size="lg" withIcon>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 15h3c.55 0 1 .45 1 1s-.45 1-1 1H7c-2.76 0-5-2.24-5-5s2.24-5 5-5h3c.55 0 1 .45 1 1s-.45 1-1 1H7c-1.65 0-3 1.35-3 3s1.35 3 3 3Zm10-8h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c1.65 0 3 1.35 3 3s-1.35 3-3 3h-3c-.55 0-1 .45-1 1s.45 1 1 1h3c2.76 0 5-2.24 5-5s-2.24-5-5-5Zm-9 5c0 .55.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1H9c-.55 0-1 .45-1 1Z"></path></svg>
+      </Badge></a>
+    </Section>
+
+    <Section type="columns">
+      <Card color="blue">
+        <div class="flex flex-col gap-6 items-start">
+          <Text size="xl" uppercase>
+            Profile
+          </Text>
+          <Text>
+            I have been in design for five years. 
+            During this time I managed to work with various designs direction: 
+            motion (animation), video processing, printing, branding, Web, UX/UI, illustration, presentations and marketing materials.
+            Last 2+ years I was actively developing in UX/UI, because I am fond of this design direction.
+            In UX/UI, I position myself  as Middle+ level.
+            And I intend to continue to develop in UX/UI, at least for the next years.
+            I like to create thoughtful and cool interfaces, do research and analyze different ideas, and then create a quality design.I like to work with a cool team with a cool workflow.
+            I create design that solves business and people problems.
+            Not design for design's sake.
+            Me favorite - is complicated interfaces, like CRM and SaaS. I love logical and usability.
+          </Text>
+        </div>
+      </Card>
+      
+      <div class="flex flex-col gap-4 pt-4">
+        <Text size='xl' color="white" uppercase>Work expirience</Text>
+
+        <Card color="white">
+          <Text size="lg" uppercase>
+            UX/UI & Web Designer
+          </Text>
+          <Text color='blue' uppercase customClass='mt-1 mb-0.5'>Outsource, Freelance, Part-Time, Full-time</Text>
+          <Text color="blue" size="sm">from 06.2021 to present</Text>
+          <Text customClass='mt-3'>
+            Hello! My name is Andrii Deisan. I can do some great things for you.And I intend to continue to develop in UX/UI, at least for the next years.
+            I like to create thoughtful and cool interfaces, do research and analyze different ideas, and then create a quality design.I like to work with a cool team with a cool workflow.
+            I create design that solves business and people problems.
+            Not design for design's sake.
+            Me favorite - is complicated interfaces, like CRM and SaaS. I love logical and usability.
+          </Text>
+        </Card>
+
+        <Card color="white">
+          <Text size="lg" uppercase>
+            UX/UI & Web Designer
+          </Text>
+          <Text color='blue' uppercase customClass='mt-1 mb-0.5'>Outsource, Freelance, Part-Time, Full-time</Text>
+          <Text color="blue" size="sm">from 06.2021 to present</Text>
+          <Text customClass='mt-3'>
+            Hello! My name is Andrii Deisan. I can do some great things for you.And I intend to continue to develop in UX/UI, at least for the next years.
+            I like to create thoughtful and cool interfaces, do research and analyze different ideas, and then create a quality design.I like to work with a cool team with a cool workflow.
+            I create design that solves business and people problems.
+            Not design for design's sake.
+            Me favorite - is complicated interfaces, like CRM and SaaS. I love logical and usability.
+          </Text>
+        </Card>
+      </div>
+
+        <Card color="light">
+          <div class="flex flex-col gap-6 items-start">
+          <Text size="xl">Skills</Text>
+          
+          <div class="flex flex-wrap gap-1">
+            {resume.hard_skills.map((skill) => (
+              <Badge title={skill} color="black" />
+            ))}
+          </div>
+        </div>
+        </Card>
+
+      <Card color="dark">
+        <div class="flex flex-col gap-6">
+          <Text size="xl">Tools</Text>
+
+          <div class="flex flex-col gap-2 items-start">
+            <Badge title="figma" color="blue" uppercase />
+            <Text>
+              Hello! My name is Andrii Deisan. I can do some great things for you.And I intend to continue to develop in UX/UI, at least for the next years.
+            </Text>
+          </div>
+          
+          <div class="flex flex-col gap-2 items-start">
+            <Badge title="figma" color="blue" uppercase />
+          <Text>
+            Hello! My name is Andrii Deisan. I can do some great things for you.And I intend to continue to develop in UX/UI, at least for the next years.
+          </Text>
+        </div>
+        <div class="flex flex-col gap-2 items-start">
+            <Badge title="figma" color="blue" uppercase />
+          <Text>
+            Hello! My name is Andrii Deisan. I can do some great things for you.And I intend to continue to develop in UX/UI, at least for the next years.
+          </Text>
+        </div>
+        <div class="flex flex-col gap-2 items-start">
+            <Badge title="figma" color="blue" uppercase />
+          <Text>
+            Hello! My name is Andrii Deisan. I can do some great things for you.And I intend to continue to develop in UX/UI, at least for the next years.
+          </Text>
+        </div>
+        <div class="flex flex-col gap-2 items-start">
+            <Badge title="figma" color="blue" uppercase />
+          <Text>
+            Hello! My name is Andrii Deisan. I can do some great things for you.And I intend to continue to develop in UX/UI, at least for the next years.
+          </Text>
+        </div>
+        <div class="flex flex-col gap-2 items-start">
+            <Badge title="figma" color="blue" uppercase />
+          <Text>
+            Hello! My name is Andrii Deisan. I can do some great things for you.And I intend to continue to develop in UX/UI, at least for the next years.
+          </Text>
+        </div>
+        <div class="flex flex-col gap-2 items-start">
+            <Badge title="figma" color="blue" uppercase />
+          <Text>
+            Hello! My name is Andrii Deisan. I can do some great things for you.And I intend to continue to develop in UX/UI, at least for the next years.
+          </Text>
+        </div>
+      </Card>
+	</main>
+</Layout>
