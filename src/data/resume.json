@@ -6,7 +6,7 @@
     "email": "ideysan@gmail.com",
     "phone": "+380976246497",
     "city": "Kyiv",
-    "summary": "A front-end developer with commercial experience in web applications development.  Good knowledge of JavaScript, React, HTML & CSS. Practical experience of development from layout to release in a product company. Strong at taking responsibility for my work results, appreciative of feedback, adaptable to business environments changes, keeping productivity and effectiveness on the same level."
+    "summary": "I am an experienced front-end developer with a strong command of JavaScript, React, HTML, and CSS. I guide projects from conception to deployment and am committed to taking ownership of my work. I embrace feedback and adapt seamlessly to dynamic business environments while maintaining peak productivity. Looking forward, I am excited to deepen my expertise in frontend development, stay updated on emerging technologies, and refine my skills in advanced frameworks and UI/UX design. I also aspire to broaden my knowledge in backend development, cloud computing, and DevOps practices to contribute effectively to cross-functional projects and tackle more intricate challenges in the evolving web development landscape."
   },
   "work_experience": [
     {
@@ -15,31 +15,31 @@
       "start_date": "September 2022",
       "end_date": "Present",
       "city": "Vinnytsya",
-      "description": "SSR"
+      "description": "I lead the front-end development of client and admin modules, forming communication protocols for client-server interaction. I contributed to a large-scale, multilingual project with over 200 non-template pages, which features its own architecture with SSR. I built numerous reusable components, developed modules based on Redux and Redux Thunk, and covered projects with Jest snapshot tests. Key achievements include developing a site builder module, optimizing the build process, updating SVG image generation, enhancing PDF templates, and updating libraries. I also continuously improve site performance and collaborate with cross-functional teams to deliver projects on time."
     },
     {
       "job_title": "Frontend Developer (React)",
       "company": "HolyWater at Genesis",
       "start_date": "January 2022",
-      "end_date": "May 2022",
+      "end_date": "June 2022",
       "city": "Ukraine",
-      "description": "Created interactive user interfaces in React and Typescript with the help of state managers Redux Toolkit and Effector; a tool for working with forms – Formik; for stylization – CSS Modules and a component library Chakra UI; for requests from the server – Apollo GraphQL; for working with REST API – fetch/axios; the architectural methodology of Feature-Sliced Design; for task planning – Asana."
+      "description": "I created interactive user interfaces in React and Typescript, utilizing Redux Toolkit and Effector for state management, Formik for forms, CSS Modules and Chakra UI for styling, Apollo GraphQL for server requests, and fetch/axios for REST API interactions. I adhered to the architectural methodology of Feature-Sliced Design and used Asana for task planning."
     },
     {
-      "job_title": "Video project manager",
+      "job_title": "Video Project Manager",
       "company": "Network of dental clinics “Lumi-Dent”",
       "start_date": "February 2019",
       "end_date": "August 2021",
       "city": "Kyiv",
-      "description": "Filming and editing of video materials; writing of scripts for the videos; working with light and sound equipment; launching videos; managing videos at various stages of post-production; knowing how to use keywords; tracking post assets: thumbnails, captions, etc.; implementing advanced knowledge of Adobe post-production; using various codecs, luts, standard post processes; maintaining channel quality, organization, and content governance."
+      "description": "I filmed and edited video materials, wrote scripts, managed videos at various post-production stages, and used Adobe post-production tools. I ensured the quality, organization, and content governance of the channel."
     },
     {
-      "job_title": "Content manager",
+      "job_title": "Content Manager",
       "company": "Network of dental clinics “Lumi-Dent”",
       "start_date": "March 2018",
       "end_date": "January 2019",
       "city": "Kyiv",
-      "description": "Site administration; content creating, managing and editing; photo and video editing; using SEO knowledge for content optimization; content localization; working with CRM system."
+      "description": "I administered the site, created and edited content, optimized content using SEO, edited photos and videos, localized content, and worked with CRM systems."
     },
     {
       "job_title": "Internet Marketing",
@@ -47,17 +47,41 @@
       "start_date": "2016",
       "end_date": "2018",
       "city": "Online",
-      "description": "Social media marketing; setting up advertisement campaigns; forum moderation and support."
+      "description": "I managed social media marketing, set up advertisement campaigns, and moderated and supported forums."
     }
   ],
   "education": [
+    {
+      "institution": "Udemy",
+      "degree": "Testing JavaScript and React applications",
+      "start_date": "April 2024",
+      "end_date": "April 2024",
+      "city": "Online",
+      "description": "This course provides comprehensive training in testing JavaScript and React applications, covering tools like Jest and React Testing Library. Topics include implementing robust testing strategies through practical exercises and real-world examples."
+    },
+    {
+      "institution": "JavaScript Mastery",
+      "degree": "Ultimate Next.js Course",
+      "start_date": "October 2023",
+      "end_date": "November 2023",
+      "city": "Online",
+      "description": "The Ultimate Next.js Course explores Next.js development, focusing on authentication, routing, database integration, and TypeScript usage. Advanced features like OpenAI integration are also covered, enabling developers to build scalable web applications."
+    },
+    {
+      "institution": "Udemy",
+      "degree": "Redux for the state of React apps managing",
+      "start_date": "July 2022",
+      "end_date": "July 2022",
+      "city": "Online",
+      "description": "This course delves into Redux, a state management library for React applications. Topics include Redux principles, best practices, and practical projects to build scalable and maintainable React applications with Redux integration."
+    },
     {
       "institution": "Frontend Developer",
       "degree": "Online Course",
       "start_date": "September 2021",
       "end_date": "January 2022",
       "city": "Online",
-      "description": ""
+      "description": "The course covered fundamental and advanced topics in frontend development, including HTML5, CSS3, JavaScript, and modern frameworks like React. Key areas of focus included responsive web design, version control with Git, building dynamic user interfaces, state management with Redux, and best practices for writing clean, maintainable code. The course also included hands-on projects to build real-world applications and collaborative coding exercises to enhance teamwork skills."
     },
     {
       "institution": "HTML Academy",
@@ -73,7 +97,7 @@
       "start_date": "September 2010",
       "end_date": "February 2016",
       "city": "Kyiv",
-      "description": "Chemical engineering faculty."
+      "description": "I studied at the chemical engineering faculty."
     }
   ],
   "social_profiles": [
@@ -91,14 +115,81 @@
     }
   ],
   "hard_skills": [
-    "React",
-    "JavaScript",
-    "Typescript",
-    "HTML & CSS",
-    "Firebase",
-    "CI/CD",
-    "Git",
-    "English (Intermediate)"
+    {
+      "name": "React",
+      "description": "I used React extensively to develop interactive user interfaces and complex web applications at Memcrab and HolyWater at Genesis. I implemented dynamic components and optimized rendering performance for a better user experience."
+    },
+    {
+      "name": "JavaScript",
+      "description": "My projects at Memcrab and HolyWater at Genesis heavily relied on JavaScript for implementing interactive features and handling client-server communication. I wrote modular and maintainable code for better project scalability."
+    },
+    {
+      "name": "TypeScript",
+      "description": "I utilized TypeScript for type-safe coding and enhancing code quality in projects at HolyWater at Genesis. TypeScript allowed me to catch errors early and improve overall development efficiency."
+    },
+    {
+      "name": "HTML & CSS",
+      "description": "I built responsive and accessible web pages using HTML and CSS at Memcrab. My work involved creating layouts, styling components, and ensuring cross-browser compatibility."
+    },
+    {
+      "name": "Firebase",
+      "description": "During my time at Memcrab, I integrated Firebase for real-time database management, authentication, and cloud storage, which streamlined development and improved app performance."
+    },
+    {
+      "name": "CI/CD",
+      "description": "At Memcrab, I set up and maintained CI/CD pipelines to automate the build, test, and deployment processes. This ensured faster and more reliable releases, improving overall productivity."
+    },
+    {
+      "name": "Git",
+      "description": "I used Git for version control in all my projects, ensuring efficient collaboration with team members and maintaining a clear history of code changes. I also managed branching and merging strategies effectively."
+    },
+    {
+      "name": "English (Intermediate)",
+      "description": "I have intermediate proficiency in English, enabling effective communication with international clients and team members. I used my language skills to collaborate on projects and understand technical documentation."
+    }
   ],
-  "soft_skills": ["Skill 1", "Skill 2", "Skill 3"]
+  "soft_skills": [
+    {
+      "name": "Communication",
+      "description": "I effectively conveyed information and ideas through various media in my roles at Memcrab and HolyWater at Genesis. My clear communication helped in collaborating with team members and understanding client requirements."
+    },
+    {
+      "name": "Problem-Solving",
+      "description": "I tackled complex challenges and developed innovative solutions during my tenure at Memcrab. I identified issues, gathered relevant information, and implemented effective strategies to overcome obstacles."
+    },
+    {
+      "name": "Adaptability",
+      "description": "I demonstrated adaptability by quickly adjusting to new technologies and changing business environments at HolyWater at Genesis. I embraced new tools and frameworks to stay ahead in the dynamic tech industry."
+    },
+    {
+      "name": "Teamwork",
+      "description": "I collaborated effectively with cross-functional teams at Memcrab, ensuring successful project deliveries. My teamwork skills fostered a positive work environment and enhanced overall productivity."
+    },
+    {
+      "name": "Time Management",
+      "description": "I managed my time efficiently to meet deadlines and handle multiple tasks simultaneously at Memcrab. My time management skills ensured timely project completion and maintained work-life balance."
+    },
+    {
+      "name": "Continuous Learning",
+      "description": "I pursued continuous learning by taking courses and staying updated with the latest industry trends. This proactive approach helped me acquire new skills and improve my expertise in frontend development."
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "Badminton",
+      "description": "I regularly play badminton with colleagues and participate in competitions. This hobby helps me stay active and builds camaraderie with my teammates."
+    },
+    {
+      "name": "Fitness",
+      "description": "I maintain an active lifestyle through regular fitness activities, which helps me stay energized and focused. My fitness routine includes strength training, cardio exercises, and outdoor activities."
+    },
+    {
+      "name": "Photography",
+      "description": "I have a passion for photography, capturing moments and landscapes through my lens. This hobby allows me to express my creativity and appreciate the beauty in everyday life."
+    },
+    {
+      "name": "Travel",
+      "description": "I enjoy discovering new places within my city. Traveling broadens my perspective and inspires creativity in my professional and personal life."
+    }
+  ]
 }
