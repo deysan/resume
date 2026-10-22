@@ -5,4 +5,7 @@ export default defineConfig({
   site: "https://deysan.github.io",
   base: "/resume/",
   trailingSlash: "always",
+  build: {
+    inlineStylesheets: "always",
+  },
 });
