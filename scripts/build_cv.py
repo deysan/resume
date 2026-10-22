@@ -102,7 +102,7 @@ for item in r['experience']:
 story += [PageBreak(), section('Skills')]
 rows = [[bullet(cell, 'skill') for cell in row] for row in r['pdf']['skillRows']]
 table = Table(rows, colWidths=[WIDTH/2, WIDTH/2], hAlign='LEFT')
-table.setStyle(TableStyle([('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(-1,-1),8),('TOPPADDING',(0,0),(-1,-1),0),('BOTTOMPADDING',(0,0),(-1,-1),3),('VALIGN',(0,0),(-1,-1),'TOP')]))
+table.setStyle(TableStyle([('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(-1,-1),8),('TOPPADDING',(0,0),(-1,-1),0),('BOTTOMPADDING',(0,0),(-1,-1),1.5),('VALIGN',(0,0),(-1,-1),'TOP')]))
 story += [table, section('Training & Courses')]
 courses = sorted(r['learning']+r['moreLearning'], key=lambda c: datetime.strptime(c['date'], '%b %Y'), reverse=True)
 for course in courses:

@@ -111,7 +111,8 @@
         "JavaScript",
         "HTML",
         "CSS",
-        "Motion"
+        "Motion",
+        "Server-side rendering (SSR)"
       ]
     },
     {
@@ -122,18 +123,19 @@
         "reselect",
         "Zod",
         "REST",
-        "GraphQL"
+        "GraphQL",
+        "MongoDB"
       ]
     },
     {
       "title": "CMS & experimentation",
       "items": [
-        "Strapi",
+        "Strapi · CMS tooling",
         "GrowthBook",
         "A/B testing",
         "i18n",
         "Lingui",
-        "Node.js · SSR/CMS tooling"
+        "Node.js"
       ]
     },
     {
@@ -229,9 +231,9 @@
     "webResumeUrl": "https://deysan.github.io/resume/",
     "summary": "Product Engineer with a strong frontend focus and 4+ years building web products with React, Next.js and TypeScript. Develops funnels, personalized journeys and checkout, combining engineering judgment with product context. Experience spans testing, performance, CMS automation and targeted server-side changes. Uses AI-assisted workflows with human review and validation.",
     "skillRows": [
-      ["React · Next.js", "Strapi"],
+      ["React · Next.js", "Strapi · CMS tooling"],
       ["TypeScript · JavaScript", "GrowthBook · A/B testing"],
-      ["HTML · CSS", "Node.js (SSR/CMS tooling)"],
+      ["HTML · CSS", "Node.js"],
       ["React Query", "Webpack · Rspack"],
       ["Redux · Redux Toolkit · reselect", "Git"],
       ["Zod", "ESLint · Oxlint"],
@@ -240,8 +242,9 @@
         "Amplitude · GTM · Meta Pixel/CAPI"
       ],
       ["REST · GraphQL", "SQL · BigQuery"],
-      ["Jest · Vitest", "AI-assisted development"],
-      ["Motion (React animations)", "Claude Code · Codex · MCP"]
+      ["Jest · Vitest", "MongoDB"],
+      ["Motion (React animations)", "AI-assisted development"],
+      ["Server-side rendering (SSR)", "Claude Code · Codex · MCP"]
     ]
   }
 }
