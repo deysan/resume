@@ -127,21 +127,6 @@ a:hover {
   mix-blend-mode: soft-light;
   pointer-events: none;
 }
-.portrait-card::after {
-  content: "";
-  position: absolute;
-  inset: 55% 0 0;
-  z-index: 2;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.68));
-  pointer-events: none;
-}
-.portrait-caption {
-  position: absolute;
-  bottom: 26px;
-  left: 26px;
-  z-index: 3;
-  font-size: 14px;
-}
 .hero-copy {
   display: flex;
   flex-direction: column;
@@ -684,11 +669,6 @@ footer {
   }
   .portrait-card {
     min-height: 290px;
-  }
-  .portrait-caption {
-    left: 16px;
-    bottom: 20px;
-    font-size: 12px;
   }
   .hero-copy {
     padding: 24px;
