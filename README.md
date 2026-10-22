@@ -27,7 +27,7 @@ npm run preview
 - `src/data/resume.json` — content shared by the website and PDF. The `pdf` field contains the PDF summary, skill grouping, and web resume URL.
 - `src/pages/index.astro` — page structure.
 - `src/styles/global.css` — styles and responsive layout.
-- `public/andrii-deisan.jpg` — website portrait.
+- `src/assets/andrii-deisan.jpg` — original website portrait. Astro generates responsive WebP images during the build.
 - `assets/cv-portrait.jpg` — optimized 400 × 400 JPEG portrait for the PDF.
 - `public/Andrii_Deisan_CV.pdf` — downloadable CV. Regenerate it after updating resume content.
 

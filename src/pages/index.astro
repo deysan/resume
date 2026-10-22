@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import ContactLinks from "../components/ContactLinks.astro";
 import resume from "../data/resume.json";
+import { Image } from "astro:assets";
+import portrait from "../assets/andrii-deisan.jpg";
 const asset = (name: string) => `${import.meta.env.BASE_URL}${name}`;
 ---
 
@@ -19,11 +21,16 @@ const asset = (name: string) => `${import.meta.env.BASE_URL}${name}`;
       <section class="hero" aria-labelledby="name">
         <div class="hero-grid">
           <div class="portrait-card">
-            <img
-              src={asset("andrii-deisan.jpg")}
+            <Image
+              src={portrait}
               alt="Andrii Deisan"
-              width="2000"
-              height="2000"
+              width={800}
+              height={800}
+              widths={[480, 800, 1200]}
+              sizes="(max-width: 450px) 420px, 400px"
+              format="webp"
+              quality={85}
+              loading="eager"
               fetchpriority="high"
             />
           </div>
