@@ -26,7 +26,7 @@ npm run preview
 
 - `src/data/resume.json` is the shared source for the webpage and downloadable CV. Keep dates, role names, and attribution of team-reported results accurate.
 - `src/pages/index.astro` defines the page sections; `src/styles/global.css` contains design tokens and responsive styles.
-- `public/andrii-deisan.jpg` is Andrii's public GitHub portrait.
+- `public/andrii-deisan.jpg` is the original 2000 × 2000 portrait supplied by Andrii.
 - `public/Andrii_Deisan_CV.pdf` is the downloadable, two-page CV. Regenerate it whenever the shared data changes.
 
 ### Regenerate the PDF
