@@ -70,10 +70,9 @@ def link(label, url, underline=True):
     text = f'<u>{clean(label)}</u>' if underline else clean(label)
     return f'<link href="{safe_url}" color="#365f91">{text}</link>'
 
-# Reuse labels, destinations, and order on both pages.
+# Reuse contact labels and destinations on both pages.
 SOCIAL_CONTACTS = [
     ('Telegram @deysan', r['socials'][2]['url']),
-    ('GitHub @deysan', r['socials'][1]['url']),
     ('Linkedin.com/in/deysan', r['socials'][0]['url']),
 ]
 
@@ -87,7 +86,7 @@ def first_page(canvas, doc):
     canvas.drawString(MARGIN+77, A4[1]-VERTICAL_MARGIN-19, r['name'])
     canvas.setFont('CV', 12)
     canvas.drawString(MARGIN+77, A4[1]-VERTICAL_MARGIN-36, r['role'])
-    header_socials = [SOCIAL_CONTACTS[2], SOCIAL_CONTACTS[0]]
+    header_socials = [SOCIAL_CONTACTS[1], SOCIAL_CONTACTS[0]]
     contact_rows = [(r['email'], 'mailto:' + r['email']), *header_socials]
     contact = p('<br/>'.join(link(label, url, underline=False) for label, url in contact_rows), 'contacts')
     _, height = contact.wrap(210, 80)
