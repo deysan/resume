@@ -96,11 +96,17 @@ a:hover {
   gap: 16px;
 }
 .portrait-card {
+  /* Reversible color grading; keep the source portrait untouched. */
+  --portrait-brightness: 1.08;
+  --portrait-contrast: 1.04;
+  --portrait-saturation: 0.92;
+  --portrait-cool-tint: rgb(106 164 242 / 22%);
   min-width: 0;
   background: var(--blue);
   border-radius: var(--radius);
   overflow: hidden;
   position: relative;
+  isolation: isolate;
   min-height: 355px;
 }
 .portrait-card img {
@@ -109,18 +115,31 @@ a:hover {
   object-fit: cover;
   position: absolute;
   inset: 0;
+  filter: brightness(var(--portrait-brightness))
+    contrast(var(--portrait-contrast)) saturate(var(--portrait-saturation));
+}
+.portrait-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--portrait-cool-tint);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
 }
 .portrait-card::after {
   content: "";
   position: absolute;
   inset: 55% 0 0;
+  z-index: 2;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.68));
+  pointer-events: none;
 }
 .portrait-caption {
   position: absolute;
   bottom: 26px;
   left: 26px;
-  z-index: 1;
+  z-index: 3;
   font-size: 14px;
 }
 .hero-copy {
