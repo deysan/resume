@@ -40,7 +40,7 @@ styles = {
     'job': ParagraphStyle('job', fontName='CV-Bold', fontSize=BODY_SIZE, leading=LINE_HEIGHT, spaceBefore=6, spaceAfter=2, keepWithNext=True),
     'bullet': ParagraphStyle('bullet', fontName='CV', fontSize=BODY_SIZE, leading=LINE_HEIGHT, leftIndent=23, firstLineIndent=0, bulletIndent=13, bulletFontName='CV', bulletFontSize=BODY_SIZE, spaceAfter=2),
     'skill': ParagraphStyle('skill', fontName='CV', fontSize=BODY_SIZE, leading=LINE_HEIGHT, leftIndent=7, firstLineIndent=0, bulletIndent=0, bulletFontName='CV', bulletFontSize=BODY_SIZE, spaceAfter=0),
-    'contacts': ParagraphStyle('contacts', fontName='CV', fontSize=10, leading=13, alignment=TA_RIGHT),
+    'contacts': ParagraphStyle('contacts', fontName='CV', fontSize=10, leading=15, alignment=TA_RIGHT),
 }
 
 # Give the shorter second page a little more breathing room between courses.
@@ -76,7 +76,13 @@ def first_page(canvas, doc):
     canvas.drawString(MARGIN+77, A4[1]-VERTICAL_MARGIN-19, r['name'])
     canvas.setFont('CV', 12)
     canvas.drawString(MARGIN+77, A4[1]-VERTICAL_MARGIN-36, r['role'])
-    contact = p(link(r['email'], 'mailto:'+r['email'])+' · '+link('LinkedIn',r['socials'][0]['url'])+'<br/>'+link('Telegram @deysan',r['socials'][2]['url']), 'contacts')
+    contact_rows = [
+        (r['email'], 'mailto:' + r['email']),
+        ('LinkedIn: deysan', r['socials'][0]['url']),
+        ('GitHub: deysan', r['socials'][1]['url']),
+        ('Telegram: @deysan', r['socials'][2]['url']),
+    ]
+    contact = p('<br/>'.join(link(label, url) for label, url in contact_rows), 'contacts')
     _, height = contact.wrap(210, 80)
     contact.drawOn(canvas, A4[0]-MARGIN-210, A4[1]-VERTICAL_MARGIN-height)
     canvas.restoreState()
