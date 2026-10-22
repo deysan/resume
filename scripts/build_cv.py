@@ -87,7 +87,7 @@ def first_page(canvas, doc):
     canvas.drawString(MARGIN+77, A4[1]-VERTICAL_MARGIN-19, r['name'])
     canvas.setFont('CV', 12)
     canvas.drawString(MARGIN+77, A4[1]-VERTICAL_MARGIN-36, r['role'])
-    header_socials = [item for item in SOCIAL_CONTACTS if item[1] != r['socials'][1]['url']]
+    header_socials = [SOCIAL_CONTACTS[2], SOCIAL_CONTACTS[0]]
     contact_rows = [(r['email'], 'mailto:' + r['email']), *header_socials]
     contact = p('<br/>'.join(link(label, url, underline=False) for label, url in contact_rows), 'contacts')
     _, height = contact.wrap(210, 80)
