@@ -1,0 +1,20 @@
+---
+import resume from "../data/resume.json";
+---
+
+<ul class="contact-links">
+  <li>
+    <a href={`mailto:${resume.email}`}>
+      {resume.email}
+      <span aria-hidden="true">↗</span>
+    </a>
+  </li>
+  {resume.socials.map((link) => (
+    <li>
+      <a href={link.url}>
+        {link.label}
+        <span aria-hidden="true">↗</span>
+      </a>
+    </li>
+  ))}
+</ul>

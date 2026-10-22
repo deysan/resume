@@ -1,159 +1,251 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Text from '../components/Text.astro';
-import Badge from '../components/Badge.astro';
-import Section from '../components/Section.astro';
-import resume from '../data/resume.json'
-import { ICONS_PATH } from '../data/icons.ts'
+import Layout from "../layouts/Layout.astro";
+import ContactLinks from "../components/ContactLinks.astro";
+import resume from "../data/resume.json";
+const asset = (name: string) => `${import.meta.env.BASE_URL}${name}`;
 ---
 
 <Layout>
-	<main class="flex flex-col gap-6">
-    <h1 class="flex gap-6 flex-wrap text-white uppercase text-6xl">
-      {resume.about.name} 
-      
-      <div class="flex-auto p-4 rounded-2xl bg-white text-black">
-        <Text size="lg" uppercase>
-          {resume.about.position}
-        </Text>
-      </div>
-    </h1>
-
-    <Section>
-      <div class="flex flex-wrap gap-2 mb-2">
-        {resume.about.city && (
-          <Badge title={resume.about.city} color="white" size="xl" withIcon>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d={ICONS_PATH.city}></path></svg>
-          </Badge>
-        )}
-        {resume.about.phone && (
-          <a href={`tel:${resume.about.phone}`} class="group cursor-pointer rounded-full hover:shadow-lg hover:shadow-blue-500 *:hover:underline *:hover:underline-offset-4 *:hover:text-blue-500">
-            <Badge title={resume.about.phone} color="white" size="xl" withIcon>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d={ICONS_PATH.phone}></path></svg>
-            </Badge>
-          </a>
-        )}
-        {resume.about.email && (
-          <a href={`mailto:${resume.about.email}`} class="group cursor-pointer rounded-full hover:shadow-lg hover:shadow-blue-500 *:hover:underline *:hover:underline-offset-4 *:hover:text-blue-500">
-            <Badge title={resume.about.email} color="white" size="xl" withIcon>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d={ICONS_PATH.email}></path></svg>
-            </Badge>
-          </a>
-        )}
-      </div>
-
-      <div class="flex flex-wrap gap-2">
-        {resume.social_profiles.map((profile) => (
-          <a href={profile.link} class="group cursor-pointer rounded-full hover:shadow-lg hover:shadow-blue-500 *:hover:underline *:hover:underline-offset-4 *:hover:text-blue-500">
-            <Badge title={profile.label} color="white" size="lg" withIcon>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d={ICONS_PATH.social}></path></svg>
-            </Badge>
-          </a>
-        ))}
-      </div>
-    </Section>
-
-    <Section type="columns">
-      <Card color="blue">
-        <div class="flex flex-col gap-6 items-start">
-          <Text size="xl" uppercase>
-            Profile
-          </Text>
-          <Text>
-            {resume.about.summary}
-          </Text>
-        </div>
-      </Card>
-      
-      <div class="flex flex-col gap-4 pt-4">
-        <Text size='xl' color="white" uppercase>Work expirience</Text>
-
-        {resume.work_experience.slice(0, 2).map((expirience) => (
-          <Card color="white">
-            <Text size="lg" uppercase>
-              {expirience.job_title}
-            </Text>
-
-            <Text color='blue' uppercase customClass='mt-1 mb-0.5'>{expirience.company}, {expirience.city}</Text>
-
-            <Text color="blue" size="sm">{expirience.start_date}{expirience.start_date !== expirience.end_date ? `- ${expirience.end_date}`: ''}</Text>
-            
-            <Text customClass='mt-3'>
-              {expirience.description}
-            </Text>
-          </Card>
-        ))}
-      </div>
-
-      <div class="flex flex-col gap-4 pt-4">
-        <Text size='xl' color="white" uppercase>
-          Education
-        </Text>
-
-        {resume.education.slice(0, 4).map((education) => (
-          <Card color="white">
-            <Text size="lg" uppercase>
-              {education.degree}
-            </Text>
-
-            <Text color='blue' uppercase customClass='mt-1 mb-0.5'>{education.institution}, {education.city}</Text>
-
-            <Text color="blue" size="sm">{education.start_date}{education.start_date !== education.end_date ? `- ${education.end_date}`: ''}</Text>
-            
-            <Text customClass='mt-3'>
-              {education.description}
-            </Text>
-          </Card>
-        ))}
-      </div>
-
-      <Card color="light">
-        <div class="flex flex-col gap-6 items-start">
-          <Text size="xl">Hard skills</Text>
-          
-          {resume.hard_skills.map((skill) => (
-            <div class="flex flex-col gap-2 items-start">
-              <Badge title={skill.name} color="black" />
-              <Text>
-                {skill.description}
-              </Text>
-            </div>
-          ))}
-        </div>
-      </Card>
-
-      <Card color="dark">
-        <div class="flex flex-col gap-6">
-          <Text size="xl">Soft skills</Text>
-
-          {resume.soft_skills.map((skill) => (
-            <div class="flex flex-col gap-2 items-start">
-              <Badge title={skill.name} color="blue" />
-              <Text>
-                {skill.description}
-              </Text>
-            </div>
-          ))}
-        </div>
-      </Card>
-    </Section>
-
-    <Card color="light">
-      <div class="flex flex-col gap-6 items-start">
-        <Text size="xl">Hobbies</Text>
-        
-        {resume.hobbies.map((hobby) => (
-          <div class="flex flex-col gap-2 items-start">
-            <Text size="lg" uppercase>
-              {hobby.name}
-            </Text>
-            <Text>
-              {hobby.description}
-            </Text>
+  <div class="page-shell">
+    <header class="masthead">
+      <a href="#main" aria-label="Andrii Deisan, top of page">
+        AD<span aria-hidden="true">.</span>
+      </a>
+      <span>
+        {resume.location} <span aria-hidden="true">↗</span>
+      </span>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="name">
+        <div class="hero-grid">
+          <div class="portrait-card">
+            <img
+              src={asset("andrii-deisan.jpg")}
+              alt="Andrii Deisan"
+              width="460"
+              height="460"
+              fetchpriority="high"
+            />
+            <span class="portrait-caption">Building with purpose.</span>
           </div>
-        ))}
+          <div class="card hero-copy">
+            <p class="eyebrow">{resume.focus}</p>
+            <p class="hero-role">
+              Product
+              <br />
+              Engineer<span aria-hidden="true">.</span>
+            </p>
+            <p class="intro">{resume.intro}</p>
+          </div>
+          <div class="card hero-actions">
+            <span class="hero-arrow" aria-hidden="true">
+              ↘
+            </span>
+            <div>
+              <p class="eyebrow">The full picture</p>
+              <a
+                class="button button-blue"
+                href={asset("Andrii_Deisan_CV.pdf")}
+                download
+              >
+                Download CV <span aria-hidden="true">↓</span>
+              </a>
+              <a class="text-link" href="#experience">
+                View experience <span aria-hidden="true">↙</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <h1 id="name">{resume.name}</h1>
+        <nav aria-label="Contact and social profiles">
+          <ContactLinks />
+        </nav>
+      </section>
+
+      <section class="card profile" aria-labelledby="profile-title">
+        <div>
+          <p class="eyebrow">01 / A little context</p>
+          <h2 id="profile-title">Profile</h2>
+        </div>
+        <div>
+          <p class="profile-summary">{resume.summary}</p>
+          <div class="focus-grid">
+            {resume.focusAreas.map((area) => (
+              <div>
+                <h3>{area.title}</h3>
+                <p>{area.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="impact-section" aria-labelledby="impact-title">
+        <div class="section-heading">
+          <h2 id="impact-title">Selected impact</h2>
+          <span>From my work at Promova</span>
+        </div>
+        <div class="impact-grid">
+          {resume.impact.map((item, index) => (
+            <article
+              class:list={[
+                "card",
+                "impact-card",
+                { "impact-accent": index === 2 },
+              ]}
+            >
+              <p class="metric">{item.value}</p>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <div class="detail-grid">
+        <section id="experience" aria-labelledby="experience-title">
+          <div class="section-heading">
+            <h2 id="experience-title">Experience</h2>
+            <span>02 / Where I’ve contributed</span>
+          </div>
+          <div class="experience-list">
+            {resume.experience.map((job, index) => (
+              <article class="card job">
+                <div class="job-top">
+                  <p class="company">{job.company}</p>
+                  <span class="job-number" aria-hidden="true">
+                    0{index + 1}
+                  </span>
+                </div>
+                <h3>{job.role}</h3>
+                {job.focus && <p class="job-focus">{job.focus}</p>}
+                <p class="date">{job.dates}</p>
+                <ul class="job-bullets">
+                  {job.bullets.map((bullet) => (
+                    <li>{bullet}</li>
+                  ))}
+                </ul>
+                {job.workAccount && (
+                  <p class="work-account">
+                    During my time at Promova, I contributed through my work
+                    account:{" "}
+                    <a href={job.workAccount}>
+                      @adeisan <span aria-hidden="true">↗</span>
+                    </a>
+                  </p>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+        <div class="sidebar">
+          <section class="card skills" aria-labelledby="skills-title">
+            <p class="eyebrow">03 / What I work with</p>
+            <h2 id="skills-title">Skills & tools</h2>
+            {resume.skills.map((group) => (
+              <div class="skill-group">
+                <h3>{group.title}</h3>
+                <ul class="tags">
+                  {group.items.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </section>
+          <section class="card ai-tools" aria-labelledby="ai-title">
+            <span class="spark" aria-hidden="true">
+              ✳
+            </span>
+            <h2 id="ai-title">
+              AI-assisted.
+              <br />
+              Human-reviewed.
+            </h2>
+            <p>
+              I use AI-assisted workflows with engineering judgment, human
+              review, and validation.
+            </p>
+            <ul class="tags">
+              {resume.tools.map((tool) => (
+                <li>{tool}</li>
+              ))}
+            </ul>
+          </section>
+          <section class="card education" aria-labelledby="education-title">
+            <p class="eyebrow">04 / Always learning</p>
+            <h2 id="education-title">
+              Education
+              <br />& learning
+            </h2>
+            <div class="degree">
+              <p class="date">{resume.education.dates}</p>
+              <h3>{resume.education.degree}</h3>
+              <p>{resume.education.field}</p>
+              <p class="institution">{resume.education.institution}</p>
+            </div>
+            <h3 class="learning-heading">Selected learning</h3>
+            <ul class="learning-list">
+              {resume.learning.map((course) => (
+                <li>
+                  <span class="date">{course.date}</span>
+                  <h4>{course.title}</h4>
+                  <p>{course.provider}</p>
+                  {course.note && <p class="course-note">{course.note}</p>}
+                </li>
+              ))}
+            </ul>
+            <details>
+              <summary>More courses & conferences</summary>
+              <ul class="learning-list">
+                {resume.moreLearning.map((course) => (
+                  <li>
+                    <span class="date">{course.date}</span>
+                    <h4>{course.title}</h4>
+                    <p>{course.provider}</p>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          </section>
+          <section class="card languages" aria-labelledby="languages-title">
+            <h2 id="languages-title">Languages</h2>
+            <dl>
+              {resume.languages.map((language) => (
+                <div>
+                  <dt>{language.name}</dt>
+                  <dd>{language.level}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        </div>
       </div>
-    </Card>
-	</main>
+      <section class="card contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Let’s talk</p>
+          <h2 id="contact-title">
+            Let’s connect<span aria-hidden="true">↗</span>
+          </h2>
+          <p>
+            Interested in my experience? Get in touch, or download my CV for a
+            concise overview.
+          </p>
+        </div>
+        <a class="button button-light" href={`mailto:${resume.email}`}>
+          Say hello <span aria-hidden="true">↗</span>
+        </a>
+        <nav aria-label="Get in touch">
+          <ContactLinks />
+        </nav>
+      </section>
+    </main>
+    <footer>
+      <span>© {resume.name}</span>
+      <span>Updated {resume.updated}</span>
+      <a href={asset("Andrii_Deisan_CV.pdf")} download>
+        Download CV ↓
+      </a>
+    </footer>
+  </div>
 </Layout>

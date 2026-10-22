@@ -1,17 +1,31 @@
 ---
-
+import "../styles/global.css";
+import resume from "../data/resume.json";
+const description =
+  "Andrii Deisan — Product Engineer with a frontend focus. 4+ years building web products with React, Next.js, and TypeScript.";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Resume" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>Andrii Deisan. Frontend developer</title>
-	</head>
-	<body class="bg-black p-4 xl:container mx-auto">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#101010" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={`${resume.name} · ${resume.role}`} />
+    <meta property="og:description" content={description} />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={`${import.meta.env.BASE_URL}favicon.svg`}
+    />
+    <title>{resume.name} · {resume.role}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to content
+    </a>
+    <slot />
+  </body>
 </html>
