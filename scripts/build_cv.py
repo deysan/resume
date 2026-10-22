@@ -87,7 +87,7 @@ def first_page(canvas, doc):
     contact.drawOn(canvas, A4[0]-MARGIN-210, A4[1]-VERTICAL_MARGIN-height)
     canvas.restoreState()
 
-story = [Spacer(1, 80), section('Summary'), p(clean(r['pdf']['summary'])), section('Experience')]
+story = [Spacer(1, 96), section('Summary'), p(clean(r['pdf']['summary'])), section('Experience')]
 for item in r['experience']:
     role = item['role'] + (f" ({item['focus']})" if item['focus'] else '')
     story.append(KeepTogether([p(clean(f"{role}, {item['company']}"), 'job'), p(date_range(item['dates']))]))
