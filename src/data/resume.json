@@ -226,7 +226,7 @@
     }
   ],
   "pdf": {
-    "webResumeUrl": null,
+    "webResumeUrl": "https://deysan.github.io/resume/",
     "summary": "Product Engineer with a strong frontend focus and 4+ years building web products with React, Next.js and TypeScript. Develops funnels, personalized journeys and checkout, combining engineering judgment with product context. Experience spans testing, performance, CMS automation and targeted server-side changes. Uses AI-assisted workflows with human review and validation.",
     "skillRows": [
       ["React · Next.js", "Strapi"],

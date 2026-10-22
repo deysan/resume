@@ -13,7 +13,7 @@ npm ci
 npm run dev
 ```
 
-Open the local URL printed by Astro. For a production preview:
+Open the local URL printed by Astro with the `/resume/` path. For a production preview:
 
 ```sh
 npm run build
@@ -42,8 +42,10 @@ python3 -m venv .venv
 
 On another platform, pass `--font-dir /path/to/fonts` containing `Arial.ttf`, `Arial Bold.ttf`, and `Georgia Bold.ttf`. The script reads the shared JSON and writes the PDF into `public/`. Check both rendered pages after changing the text.
 
-## Deployment status
+## GitHub Pages
 
-GitHub Pages is not configured or enabled by this change. There is no deployment workflow. The default build uses the root path for local preview. When publication is approved, configure Astro's `site` and `base` for the chosen GitHub Pages URL, then add the deployment workflow. Asset links already use Astro's `BASE_URL`.
+The public website is hosted at [deysan.github.io/resume](https://deysan.github.io/resume/). Astro uses this site origin and the `/resume/` base path; asset links use Astro's `BASE_URL`.
 
-After GitHub Pages is published and verified, set `pdf.webResumeUrl` in `src/data/resume.json` to the live URL (expected: `https://deysan.github.io/resume/`) and regenerate the PDF. This adds a separate Web resume link on page two. Keep it `null` while unpublished.
+`.github/workflows/pages.yml` checks formatting and builds pull requests. Pushes to `main` also publish the static `dist/` output through GitHub Actions. The workflow can be run manually from `main`. Repository Settings → Pages must use GitHub Actions as its source.
+
+The PDF includes this address as a separate Web resume link on page two, configured by `pdf.webResumeUrl` in `src/data/resume.json`. Regenerate and commit the PDF when its content changes; deployment serves the committed file without requiring fonts or Python in CI.
