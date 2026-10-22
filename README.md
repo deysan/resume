@@ -45,3 +45,5 @@ On another platform, pass `--font-dir /path/to/fonts` containing `Arial.ttf`, `A
 ## Deployment status
 
 GitHub Pages is not configured or enabled by this change. There is no deployment workflow. The default build uses the root path for local preview. When publication is approved, configure Astro's `site` and `base` for the chosen GitHub Pages URL, then add the deployment workflow. Asset links already use Astro's `BASE_URL`.
+
+After GitHub Pages is published and verified, set `pdf.webResumeUrl` in `src/data/resume.json` to the live URL (expected: `https://deysan.github.io/resume/`) and regenerate the PDF. This adds a separate Web resume link on page two. Keep it `null` while unpublished.
