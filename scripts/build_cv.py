@@ -86,11 +86,14 @@ def first_page(canvas, doc):
     canvas.drawString(MARGIN+77, A4[1]-VERTICAL_MARGIN-19, r['name'])
     canvas.setFont('CV', 12)
     canvas.drawString(MARGIN+77, A4[1]-VERTICAL_MARGIN-36, r['role'])
+    canvas.setFont('CV', 9)
+    canvas.setFillColor(colors.HexColor('#666666'))
+    canvas.drawString(MARGIN+77, A4[1]-VERTICAL_MARGIN-52, r['pdf']['locationLabel'])
     header_socials = [SOCIAL_CONTACTS[1], SOCIAL_CONTACTS[0]]
     contact_rows = [(r['email'], 'mailto:' + r['email']), *header_socials]
     contact = p('<br/>'.join(link(label, url, underline=False) for label, url in contact_rows), 'contacts')
     _, height = contact.wrap(210, 80)
-    contact.drawOn(canvas, A4[0]-MARGIN-210, A4[1]-VERTICAL_MARGIN-height)
+    contact.drawOn(canvas, A4[0]-MARGIN-210, A4[1]-VERTICAL_MARGIN-height-8)
     canvas.restoreState()
 
 story = [Spacer(1, 80), section('Summary'), p(clean(r['pdf']['summary'])), section('Experience')]
