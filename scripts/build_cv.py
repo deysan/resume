@@ -30,7 +30,7 @@ r = json.loads((ROOT / 'src/data/resume.json').read_text())
 BLUE = colors.HexColor('#31596f')
 LINK = colors.HexColor('#365f91')
 MARGIN = 36
-VERTICAL_MARGIN = 24
+VERTICAL_MARGIN = 40
 BODY_SIZE = 10.5
 LINE_HEIGHT = BODY_SIZE * 1.25
 WIDTH = A4[0] - 2 * MARGIN
@@ -70,7 +70,7 @@ def first_page(canvas, doc):
     canvas.saveState()
     # The reference uses a short edge accent alongside the header and summary.
     canvas.setFillColor(BLUE)
-    canvas.rect(0, A4[1]-201, 6, 177, fill=1, stroke=0)
+    canvas.rect(0, A4[1]-VERTICAL_MARGIN-177, 6, 177, fill=1, stroke=0)
     canvas.drawImage(str(ROOT / 'assets/cv-portrait.png'), MARGIN, A4[1]-VERTICAL_MARGIN-72, 72, 72, preserveAspectRatio=True, mask='auto')
     canvas.setFont('Heading', 20)
     canvas.drawString(MARGIN+77, A4[1]-VERTICAL_MARGIN-19, r['name'])
@@ -87,7 +87,7 @@ def first_page(canvas, doc):
     contact.drawOn(canvas, A4[0]-MARGIN-210, A4[1]-VERTICAL_MARGIN-height)
     canvas.restoreState()
 
-story = [Spacer(1, 96), section('Summary'), p(clean(r['pdf']['summary'])), section('Experience')]
+story = [Spacer(1, 80), section('Summary'), p(clean(r['pdf']['summary'])), section('Experience')]
 for item in r['experience']:
     role = item['role'] + (f" ({item['focus']})" if item['focus'] else '')
     story.append(KeepTogether([p(clean(f"{role}, {item['company']}"), 'job'), p(date_range(item['dates']))]))
