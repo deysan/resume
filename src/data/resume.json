@@ -1,195 +1,247 @@
 {
-  "about": {
-    "photo": "link_to_photo",
-    "name": "Andrii Deisan",
-    "position": "Frontend Developer",
-    "email": "ideysan@gmail.com",
-    "phone": "+380976246497",
-    "city": "Kyiv",
-    "summary": "I am an experienced front-end developer with a strong command of JavaScript, React, HTML, and CSS. I guide projects from conception to deployment and am committed to taking ownership of my work. I embrace feedback and adapt seamlessly to dynamic business environments while maintaining peak productivity. Looking forward, I am excited to deepen my expertise in frontend development, stay updated on emerging technologies, and refine my skills in advanced frameworks and UI/UX design. I also aspire to broaden my knowledge in backend development, cloud computing, and DevOps practices to contribute effectively to cross-functional projects and tackle more intricate challenges in the evolving web development landscape."
-  },
-  "work_experience": [
+  "name": "Andrii Deisan",
+  "role": "Product Engineer",
+  "focus": "Frontend-focused",
+  "location": "Ukraine",
+  "email": "ideysan@gmail.com",
+  "updated": "October 2026",
+  "intro": "I build web products with React, Next.js, and TypeScript — from personalized journeys and checkout to tools that help teams work faster.",
+  "summary": "I’m a Product Engineer with a strong frontend focus and 4+ years of experience building web products. My work spans experimentation, personalization, e-commerce, and internal tooling. I collaborate with product, design, backend, and ML teams, combining product context with attention to performance, testing, and maintainability.",
+  "socials": [
     {
-      "job_title": "Frontend Developer (React)",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/deysan/"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/deysan"
+    },
+    {
+      "label": "Telegram",
+      "url": "https://t.me/deysan"
+    }
+  ],
+  "focusAreas": [
+    {
+      "title": "Product experiences",
+      "text": "Funnels, personalized journeys, and checkout."
+    },
+    {
+      "title": "Tools for teams",
+      "text": "Experimentation, CMS workflows, and localization automation."
+    },
+    {
+      "title": "AI-assisted engineering",
+      "text": "Claude Code, Codex, and MCP workflows with human review and validation."
+    }
+  ],
+  "impact": [
+    {
+      "value": "6 steps → 1 click",
+      "title": "Simpler experimentation",
+      "text": "Built Strapi/GrowthBook tooling that simplified the team’s experimentation workflow."
+    },
+    {
+      "value": "8 hours → 5 min",
+      "title": "Faster localization",
+      "text": "Automated localized sales-page duplication. Time estimate provided by the product manager."
+    },
+    {
+      "value": "+60%",
+      "title": "Paywall-to-purchase conversion",
+      "text": "Team-reported relative increase for Scratch Promocode, where I implemented product updates."
+    }
+  ],
+  "experience": [
+    {
+      "company": "Promova",
+      "role": "Full-Stack Engineer",
+      "focus": "Frontend-focused",
+      "dates": "Feb 2025 — Aug 2026",
+      "bullets": [
+        "Developed marketing funnels, personalized components, conditional flows, and AI Tutor frontend features with product, design, backend, and ML colleagues.",
+        "Implemented updates to Profile Summary and Scratch Promocode. Team-reported relative A/B results: +15% ARPU for Profile Summary; +40% ARPU, +60% paywall-to-purchase conversion, and −40% cancellation rate for Scratch Promocode.",
+        "Improved Solidgate checkout and Apple Pay web behavior, optimized asset/data loading, and fixed device-data handling. Added unit tests and Grafana monitoring.",
+        "Built Strapi/GrowthBook experimentation tools, CMS preview, and funnel visualization. Simplified the workflow from 6 steps to 1 click; team-reported testing cadence grew from 7–10 to 30–35 tests/month. Automated localized sales-page duplication: 8 hours to 5 minutes (PM estimate).",
+        "Improved Amplitude and Meta Pixel/CAPI delivery through frontend and targeted existing Go/Fiber changes. Team-reported Purchase Event Match Quality rose from 7.7 to 8.3/10. Wrote a Strapi cleanup migration and verified recovery with DevOps.",
+        "Developed frontend-to-CMS MCP workflows and quiz-design, creative-generation, and ad-research tools. Used Claude Code and BMAD Method for AI-assisted development."
+      ],
+      "workAccount": "https://github.com/adeisan"
+    },
+    {
       "company": "Memcrab",
-      "start_date": "September 2022",
-      "end_date": "Present",
-      "city": "Vinnytsya",
-      "description": "I lead the front-end development of client and admin modules, forming communication protocols for client-server interaction. I contributed to a large-scale, multilingual project with over 200 non-template pages, which features its own architecture with SSR. I built numerous reusable components, developed modules based on Redux and Redux Thunk, and covered projects with Jest snapshot tests. Key achievements include developing a site builder module, optimizing the build process, updating SVG image generation, enhancing PDF templates, and updating libraries. I also continuously improve site performance and collaborate with cross-functional teams to deliver projects on time."
+      "role": "Frontend Engineer",
+      "focus": "",
+      "dates": "Sep 2022 — Feb 2025",
+      "bullets": [
+        "Built drag-and-drop page composition and public rendering so managers could assemble blog and product pages independently.",
+        "Developed e-commerce catalog, search, cart, delivery, and admin features; integrated backend APIs and blog CRUD with media and SEO fields.",
+        "Reduced client JavaScript through bundle analysis and library removal; migrated Webpack to Rspack for faster builds and development updates.",
+        "Created and maintained Zod schemas for checkout, cart, and localized blogs, linking runtime validation with TypeScript types and error handling.",
+        "Maintained React SSR, localization, and typed Redux/reselect selectors; added targeted Jest date-validation tests. Collaborated with backend, design, and QA."
+      ]
     },
     {
-      "job_title": "Frontend Developer (React)",
-      "company": "HolyWater at Genesis",
-      "start_date": "January 2022",
-      "end_date": "June 2022",
-      "city": "Ukraine",
-      "description": "I created interactive user interfaces in React and Typescript, utilizing Redux Toolkit and Effector for state management, Formik for forms, CSS Modules and Chakra UI for styling, Apollo GraphQL for server requests, and fetch/axios for REST API interactions. I adhered to the architectural methodology of Feature-Sliced Design and used Asana for task planning."
+      "company": "HolyWater",
+      "role": "Frontend Developer",
+      "focus": "",
+      "dates": "Jan 2022 — Jun 2022",
+      "bullets": [
+        "Developed React/TypeScript features, integrated REST/GraphQL APIs, and used Redux Toolkit and Effector for state management.",
+        "Applied Feature-Sliced Design and collaborated with product and design teams in an agile environment."
+      ]
     },
     {
-      "job_title": "Video Project Manager",
-      "company": "Network of dental clinics “Lumi-Dent”",
-      "start_date": "February 2019",
-      "end_date": "August 2021",
-      "city": "Kyiv",
-      "description": "I filmed and edited video materials, wrote scripts, managed videos at various post-production stages, and used Adobe post-production tools. I ensured the quality, organization, and content governance of the channel."
-    },
-    {
-      "job_title": "Content Manager",
-      "company": "Network of dental clinics “Lumi-Dent”",
-      "start_date": "March 2018",
-      "end_date": "January 2019",
-      "city": "Kyiv",
-      "description": "I administered the site, created and edited content, optimized content using SEO, edited photos and videos, localized content, and worked with CRM systems."
-    },
-    {
-      "job_title": "Internet Marketing",
-      "company": "Freelance",
-      "start_date": "2016",
-      "end_date": "2018",
-      "city": "Online",
-      "description": "I managed social media marketing, set up advertisement campaigns, and moderated and supported forums."
+      "company": "Lumi-Dent",
+      "role": "Webmaster / Content Manager",
+      "focus": "",
+      "dates": "May 2018 — Jul 2021",
+      "bullets": [
+        "Updated content and HTML/CSS; configured SEO and optimized website pages for search engines."
+      ]
     }
   ],
-  "education": [
+  "skills": [
     {
-      "institution": "Udemy",
-      "degree": "Testing JavaScript and React applications",
-      "start_date": "April 2024",
-      "end_date": "April 2024",
-      "city": "Online",
-      "description": "This course provides comprehensive training in testing JavaScript and React applications, covering tools like Jest and React Testing Library. Topics include implementing robust testing strategies through practical exercises and real-world examples."
+      "title": "Frontend",
+      "items": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Motion"
+      ]
     },
     {
-      "institution": "JavaScript Mastery",
-      "degree": "Ultimate Next.js Course",
-      "start_date": "October 2023",
-      "end_date": "November 2023",
-      "city": "Online",
-      "description": "The Ultimate Next.js Course explores Next.js development, focusing on authentication, routing, database integration, and TypeScript usage. Advanced features like OpenAI integration are also covered, enabling developers to build scalable web applications."
+      "title": "State & data",
+      "items": [
+        "React Query",
+        "Redux Toolkit",
+        "reselect",
+        "Zod",
+        "REST",
+        "GraphQL"
+      ]
     },
     {
-      "institution": "Udemy",
-      "degree": "Redux for the state of React apps managing",
-      "start_date": "July 2022",
-      "end_date": "July 2022",
-      "city": "Online",
-      "description": "This course delves into Redux, a state management library for React applications. Topics include Redux principles, best practices, and practical projects to build scalable and maintainable React applications with Redux integration."
+      "title": "CMS & experimentation",
+      "items": [
+        "Strapi",
+        "GrowthBook",
+        "A/B testing",
+        "i18n",
+        "Lingui",
+        "Node.js · SSR/CMS tooling"
+      ]
     },
     {
-      "institution": "Frontend Developer",
-      "degree": "Online Course",
-      "start_date": "September 2021",
-      "end_date": "January 2022",
-      "city": "Online",
-      "description": "The course covered fundamental and advanced topics in frontend development, including HTML5, CSS3, JavaScript, and modern frameworks like React. Key areas of focus included responsive web design, version control with Git, building dynamic user interfaces, state management with Redux, and best practices for writing clean, maintainable code. The course also included hands-on projects to build real-world applications and collaborative coding exercises to enhance teamwork skills."
+      "title": "Quality & delivery",
+      "items": [
+        "Jest",
+        "Vitest",
+        "Webpack",
+        "Rspack",
+        "Git",
+        "ESLint",
+        "Oxlint"
+      ]
     },
     {
-      "institution": "HTML Academy",
-      "degree": "Online Frontend Developer",
-      "start_date": "August 2018",
-      "end_date": "January 2019",
-      "city": "Online",
-      "description": "HTML, CSS, JavaScript – Successfully graduated and presented the final project. Certificate: https://htmlacademy.ru/profile/deysan/certificates"
-    },
-    {
-      "institution": "NTUU “Igor Sikorsky Kyiv Polytechnic Institute”",
-      "degree": "Master of Arts",
-      "start_date": "September 2010",
-      "end_date": "February 2016",
-      "city": "Kyiv",
-      "description": "I studied at the chemical engineering faculty."
+      "title": "Analytics",
+      "items": ["Amplitude", "GTM", "Meta Pixel/CAPI", "SQL", "BigQuery"]
     }
   ],
-  "social_profiles": [
+  "tools": ["Claude Code", "Codex", "MCP"],
+  "education": {
+    "degree": "Master’s degree",
+    "field": "Mechanical Engineering",
+    "institution": "NTUU “Igor Sikorsky Kyiv Polytechnic Institute”",
+    "dates": "2010 — 2016"
+  },
+  "learning": [
     {
-      "label": "GitHub @deysan",
-      "link": "https://github.com/deysan"
+      "title": "Agentic Engineering Workflows",
+      "provider": "SULICOM AI Academy",
+      "date": "Oct 2026",
+      "note": "Workshop practice: tried Spec-Driven Development (SDD) and used OpenAI Codex."
     },
     {
-      "label": "Telegram @deysan",
-      "link": "https://t.me/deysan"
+      "title": "Front-end Architecture",
+      "provider": "Genesis Tech · Lecture series",
+      "date": "Apr 2026"
     },
     {
-      "label": "Linkedin.com/in/deysan",
-      "link": "https://www.linkedin.com/in/deysan/"
+      "title": "Foundational courses",
+      "provider": "Anthropic",
+      "date": "Dec 2025"
+    },
+    {
+      "title": "Testing JavaScript and React applications",
+      "provider": "Udemy",
+      "date": "Apr 2024"
+    },
+    {
+      "title": "Ultimate Next.js 13 Course",
+      "provider": "JavaScript Mastery",
+      "date": "Nov 2023"
     }
   ],
-  "hard_skills": [
+  "moreLearning": [
     {
-      "name": "React",
-      "description": "I used React extensively to develop interactive user interfaces and complex web applications at Memcrab and HolyWater at Genesis. I implemented dynamic components and optimized rendering performance for a better user experience."
+      "title": "React+ fwdays’25 Conference",
+      "provider": "Fwdays",
+      "date": "Oct 2025"
     },
     {
-      "name": "JavaScript",
-      "description": "My projects at Memcrab and HolyWater at Genesis heavily relied on JavaScript for implementing interactive features and handling client-server communication. I wrote modular and maintainable code for better project scalability."
+      "title": "JavaScript fwdays’25 Conference",
+      "provider": "Fwdays",
+      "date": "May 2025"
     },
     {
-      "name": "TypeScript",
-      "description": "I utilized TypeScript for type-safe coding and enhancing code quality in projects at HolyWater at Genesis. TypeScript allowed me to catch errors early and improve overall development efficiency."
+      "title": "Redux for state management",
+      "provider": "Udemy",
+      "date": "Jul 2022"
     },
     {
-      "name": "HTML & CSS",
-      "description": "I built responsive and accessible web pages using HTML and CSS at Memcrab. My work involved creating layouts, styling components, and ensuring cross-browser compatibility."
+      "title": "Junior Frontend Developer",
+      "provider": "Result School",
+      "date": "May 2022"
     },
     {
-      "name": "Firebase",
-      "description": "During my time at Memcrab, I integrated Firebase for real-time database management, authentication, and cloud storage, which streamlined development and improved app performance."
-    },
-    {
-      "name": "CI/CD",
-      "description": "At Memcrab, I set up and maintained CI/CD pipelines to automate the build, test, and deployment processes. This ensured faster and more reliable releases, improving overall productivity."
-    },
-    {
-      "name": "Git",
-      "description": "I used Git for version control in all my projects, ensuring efficient collaboration with team members and maintaining a clear history of code changes. I also managed branching and merging strategies effectively."
-    },
-    {
-      "name": "English (Intermediate)",
-      "description": "I have intermediate proficiency in English, enabling effective communication with international clients and team members. I used my language skills to collaborate on projects and understand technical documentation."
+      "title": "HTML & CSS & JS",
+      "provider": "HTML Academy",
+      "date": "Jan 2018"
     }
   ],
-  "soft_skills": [
+  "languages": [
     {
-      "name": "Communication",
-      "description": "I effectively conveyed information and ideas through various media in my roles at Memcrab and HolyWater at Genesis. My clear communication helped in collaborating with team members and understanding client requirements."
+      "name": "Ukrainian",
+      "level": "Native"
     },
     {
-      "name": "Problem-Solving",
-      "description": "I tackled complex challenges and developed innovative solutions during my tenure at Memcrab. I identified issues, gathered relevant information, and implemented effective strategies to overcome obstacles."
-    },
-    {
-      "name": "Adaptability",
-      "description": "I demonstrated adaptability by quickly adjusting to new technologies and changing business environments at HolyWater at Genesis. I embraced new tools and frameworks to stay ahead in the dynamic tech industry."
-    },
-    {
-      "name": "Teamwork",
-      "description": "I collaborated effectively with cross-functional teams at Memcrab, ensuring successful project deliveries. My teamwork skills fostered a positive work environment and enhanced overall productivity."
-    },
-    {
-      "name": "Time Management",
-      "description": "I managed my time efficiently to meet deadlines and handle multiple tasks simultaneously at Memcrab. My time management skills ensured timely project completion and maintained work-life balance."
-    },
-    {
-      "name": "Continuous Learning",
-      "description": "I pursued continuous learning by taking courses and staying updated with the latest industry trends. This proactive approach helped me acquire new skills and improve my expertise in frontend development."
+      "name": "English",
+      "level": "B1 · Intermediate"
     }
   ],
-  "hobbies": [
-    {
-      "name": "Badminton",
-      "description": "I regularly play badminton with colleagues and participate in competitions. This hobby helps me stay active and builds camaraderie with my teammates."
-    },
-    {
-      "name": "Fitness",
-      "description": "I maintain an active lifestyle through regular fitness activities, which helps me stay energized and focused. My fitness routine includes strength training, cardio exercises, and outdoor activities."
-    },
-    {
-      "name": "Photography",
-      "description": "I have a passion for photography, capturing moments and landscapes through my lens. This hobby allows me to express my creativity and appreciate the beauty in everyday life."
-    },
-    {
-      "name": "Travel",
-      "description": "I enjoy discovering new places within my city. Traveling broadens my perspective and inspires creativity in my professional and personal life."
-    }
-  ]
+  "pdf": {
+    "webResumeUrl": "https://deysan.github.io/resume/",
+    "summary": "Product Engineer with a strong frontend focus and 4+ years building web products with React, Next.js and TypeScript. Develops funnels, personalized journeys and checkout, combining engineering judgment with product context. Experience spans testing, performance, CMS automation and targeted server-side changes. Uses AI-assisted workflows with human review and validation.",
+    "skillRows": [
+      ["React · Next.js", "Strapi"],
+      ["TypeScript · JavaScript", "GrowthBook · A/B testing"],
+      ["HTML · CSS", "Node.js (SSR/CMS tooling)"],
+      ["React Query", "Webpack · Rspack"],
+      ["Redux · Redux Toolkit · reselect", "Git"],
+      ["Zod", "ESLint · Oxlint"],
+      [
+        "Internationalization (i18n) · Lingui",
+        "Amplitude · GTM · Meta Pixel/CAPI"
+      ],
+      ["REST · GraphQL", "SQL · BigQuery"],
+      ["Jest · Vitest", "AI-assisted development"],
+      ["Motion (React animations)", "Claude Code · Codex · MCP"]
+    ]
+  }
 }
