@@ -8,9 +8,18 @@
   "intro": "I build web products with React, Next.js, and TypeScript — from personalized journeys and checkout to tools that help teams work faster.",
   "summary": "I’m a Product Engineer with a strong frontend focus and 4+ years of experience building web products. My work spans experimentation, personalization, e-commerce, and internal tooling. I collaborate with product, design, backend, and ML teams, combining product context with attention to performance, testing, and maintainability.",
   "socials": [
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/deysan/" },
-    { "label": "GitHub", "url": "https://github.com/deysan" },
-    { "label": "Telegram", "url": "https://t.me/deysan" }
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/deysan/"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/deysan"
+    },
+    {
+      "label": "Telegram",
+      "url": "https://t.me/deysan"
+    }
   ],
   "focusAreas": [
     {
@@ -207,7 +216,31 @@
     }
   ],
   "languages": [
-    { "name": "Ukrainian", "level": "Native" },
-    { "name": "English", "level": "B1 · Intermediate" }
-  ]
+    {
+      "name": "Ukrainian",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "B1 · Intermediate"
+    }
+  ],
+  "pdf": {
+    "summary": "Product Engineer with a strong frontend focus and 4+ years building web products with React, Next.js and TypeScript. Develops funnels, personalized journeys and checkout, combining engineering judgment with product context. Experience spans testing, performance, CMS automation and targeted server-side changes. Uses AI-assisted workflows with human review and validation.",
+    "skillRows": [
+      ["React · Next.js", "Strapi"],
+      ["TypeScript · JavaScript", "GrowthBook · A/B testing"],
+      ["HTML · CSS", "Node.js (SSR/CMS tooling)"],
+      ["React Query", "Webpack · Rspack"],
+      ["Redux · Redux Toolkit · reselect", "Git"],
+      ["Zod", "ESLint · Oxlint"],
+      [
+        "Internationalization (i18n) · Lingui",
+        "Amplitude · GTM · Meta Pixel/CAPI"
+      ],
+      ["REST · GraphQL", "SQL · BigQuery"],
+      ["Jest · Vitest", "AI-assisted development"],
+      ["Motion (React animations)", "Claude Code · Codex · MCP"]
+    ]
+  }
 }
