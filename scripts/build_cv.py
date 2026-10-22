@@ -66,6 +66,13 @@ def link(label, url):
     safe_url = escape(url, {'"': '&quot;'})
     return f'<link href="{safe_url}" color="#365f91"><u>{clean(label)}</u></link>'
 
+# Reuse labels, destinations, and order on both pages.
+SOCIAL_CONTACTS = [
+    ('Telegram @deysan', r['socials'][2]['url']),
+    ('GitHub @deysan', r['socials'][1]['url']),
+    ('Linkedin.com/in/deysan', r['socials'][0]['url']),
+]
+
 def first_page(canvas, doc):
     canvas.saveState()
     # The reference uses a short edge accent alongside the header and summary.
@@ -76,12 +83,7 @@ def first_page(canvas, doc):
     canvas.drawString(MARGIN+77, A4[1]-VERTICAL_MARGIN-19, r['name'])
     canvas.setFont('CV', 12)
     canvas.drawString(MARGIN+77, A4[1]-VERTICAL_MARGIN-36, r['role'])
-    contact_rows = [
-        (r['email'], 'mailto:' + r['email']),
-        ('LinkedIn: deysan', r['socials'][0]['url']),
-        ('GitHub: deysan', r['socials'][1]['url']),
-        ('Telegram: @deysan', r['socials'][2]['url']),
-    ]
+    contact_rows = [(r['email'], 'mailto:' + r['email']), *SOCIAL_CONTACTS]
     contact = p('<br/>'.join(link(label, url) for label, url in contact_rows), 'contacts')
     _, height = contact.wrap(210, 80)
     contact.drawOn(canvas, A4[0]-MARGIN-210, A4[1]-VERTICAL_MARGIN-height)
@@ -108,7 +110,7 @@ story.append(section('Education'))
 e = r['education']
 story += [p(clean(e['institution'])+', '+date_range(e['dates']), 'job'), p(clean(e['degree']+'; '+e['field']))]
 story += [section('Languages'), p(', '.join(clean(l['name']+' - '+l['level']) for l in r['languages']))]
-story += [section('Links'), p(' &nbsp; '.join(link(label, url) for label,url in [('Telegram @deysan',r['socials'][2]['url']),('GitHub @deysan',r['socials'][1]['url']),('Linkedin.com/in/deysan',r['socials'][0]['url'])]))]
+story += [section('Links'), p(' &nbsp; '.join(link(label, url) for label, url in SOCIAL_CONTACTS))]
 output = ROOT / 'public/Andrii_Deisan_CV.pdf'
 doc = SimpleDocTemplate(str(output), pagesize=A4, leftMargin=MARGIN-6, rightMargin=MARGIN-6, topMargin=VERTICAL_MARGIN-6, bottomMargin=VERTICAL_MARGIN-6, title='Andrii Deisan - Product Engineer', author='Andrii Deisan')
 doc.build(story, onFirstPage=first_page)
