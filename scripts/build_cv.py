@@ -46,7 +46,7 @@ styles = {
 # Give the shorter second page a little more breathing room between courses.
 styles['course'] = ParagraphStyle(
     'course', parent=styles['job'],
-    spaceBefore=6 if r['pdf'].get('webResumeUrl') else 8,
+    spaceBefore=8,
 )
 
 def clean(value):
@@ -114,11 +114,11 @@ story.append(section('Education'))
 e = r['education']
 story += [p(clean(e['institution'])+', '+date_range(e['dates']), 'job'), p(clean(e['degree']+'; '+e['field']))]
 story += [section('Languages'), p(', '.join(clean(l['name']+' - '+l['level']) for l in r['languages']))]
-story += [section('Links'), p(' &nbsp; '.join(link(label, url) for label, url in SOCIAL_CONTACTS))]
-# Add the public web resume only after its deployment has been verified.
+footer_links = list(SOCIAL_CONTACTS)
 if r['pdf'].get('webResumeUrl'):
     web_url = r['pdf']['webResumeUrl']
-    story.append(p(link('Web resume: ' + web_url.removeprefix('https://').rstrip('/'), web_url)))
+    footer_links.append(('Web resume: ' + web_url.removeprefix('https://').rstrip('/'), web_url))
+story += [section('Links'), p(' &nbsp; '.join(link(label, url) for label, url in footer_links))]
 output = ROOT / 'public/Andrii_Deisan_CV.pdf'
 doc = SimpleDocTemplate(str(output), pagesize=A4, leftMargin=MARGIN-6, rightMargin=MARGIN-6, topMargin=VERTICAL_MARGIN-6, bottomMargin=VERTICAL_MARGIN-6, title='Andrii Deisan - Product Engineer', author='Andrii Deisan')
 doc.build(story, onFirstPage=first_page)

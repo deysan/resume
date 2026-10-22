@@ -48,4 +48,4 @@ The public website is hosted at [deysan.github.io/resume](https://deysan.github.
 
 `.github/workflows/pages.yml` checks formatting and builds pull requests. Pushes to `main` also publish the static `dist/` output through GitHub Actions. The workflow can be run manually from `main`. Repository Settings → Pages must use GitHub Actions as its source.
 
-The PDF includes this address as a separate Web resume link on page two, configured by `pdf.webResumeUrl` in `src/data/resume.json`. Regenerate and commit the PDF when its content changes; deployment serves the committed file without requiring fonts or Python in CI.
+The PDF includes this address as a Web resume link alongside Telegram and LinkedIn in one row on page two, configured by `pdf.webResumeUrl` in `src/data/resume.json`. Regenerate and commit the PDF when its content changes; deployment serves the committed file without requiring fonts or Python in CI.
