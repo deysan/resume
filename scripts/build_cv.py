@@ -1,4 +1,4 @@
-"""Generate a two-page CV matching the user's resume.io visual reference.
+"""Generate a two-page CV from src/data/resume.json.
 Requires Python 3 + ReportLab, Arial and Georgia Bold (macOS system fonts).
 Run: python3 scripts/build_cv.py [--font-dir /path/to/fonts]
 The website photo is independent of assets/cv-portrait.png used here.
@@ -78,7 +78,7 @@ SOCIAL_CONTACTS = [
 
 def first_page(canvas, doc):
     canvas.saveState()
-    # The reference uses a short edge accent alongside the header and summary.
+    # Blue edge accent alongside the header and summary.
     canvas.setFillColor(BLUE)
     canvas.rect(0, A4[1]-VERTICAL_MARGIN-177, 6, 177, fill=1, stroke=0)
     canvas.drawImage(str(ROOT / 'assets/cv-portrait.png'), MARGIN, A4[1]-VERTICAL_MARGIN-72, 72, 72, preserveAspectRatio=True, mask='auto')

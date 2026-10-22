@@ -1,8 +1,8 @@
 # Andrii Deisan · Resume
 
-A static CV website built with Astro. Content reflects the October 2026 resume: Product Engineer with a frontend focus, experience at Promova, Memcrab, HolyWater, and Lumi-Dent. No project showcase is included.
+Personal resume website built with Astro, with professional experience, skills, education, and a downloadable PDF.
 
-The layout follows the supplied Figma reference: black canvas, electric blue accents, white and pale blue rounded cards, oversized typography, and pill-shaped contact links. It adapts to desktop, tablet, and mobile screens without client-side JavaScript.
+[Web resume](https://deysan.github.io/resume/) · [Download CV](https://deysan.github.io/resume/Andrii_Deisan_CV.pdf)
 
 ## Local development
 
@@ -24,15 +24,16 @@ npm run preview
 
 ## Updating the content
 
-- `src/data/resume.json` is the shared source for the webpage and downloadable CV. Keep dates, role names, and attribution of team-reported results accurate. The `pdf` field preserves the original resume summary and two-column skill grouping; experience and learning are shared.
-- `src/pages/index.astro` defines the page sections; `src/styles/global.css` contains design tokens and responsive styles.
-- `public/andrii-deisan.jpg` is the original 2000 × 2000 portrait supplied by Andrii.
-- `assets/cv-portrait.png` is the separate photo supplied for the PDF; it does not replace the website portrait.
-- `public/Andrii_Deisan_CV.pdf` is the downloadable, two-page CV, styled after the user’s resume.io reference (serif blue headings, photo header, and two-column skills). Regenerate it whenever the shared data changes.
+- `src/data/resume.json` — content shared by the website and PDF. The `pdf` field contains the PDF summary, skill grouping, and web resume URL.
+- `src/pages/index.astro` — page structure.
+- `src/styles/global.css` — styles and responsive layout.
+- `public/andrii-deisan.jpg` — website portrait.
+- `assets/cv-portrait.png` — PDF portrait.
+- `public/Andrii_Deisan_CV.pdf` — downloadable CV. Regenerate it after updating resume content.
 
 ### Regenerate the PDF
 
-The PDF generator is optional for normal web development. It requires Python 3, ReportLab, and Arial / Georgia Bold font files (installed by default on macOS).
+Requires Python 3, ReportLab, and the Arial and Georgia Bold fonts.
 
 ```sh
 python3 -m venv .venv
@@ -40,12 +41,10 @@ python3 -m venv .venv
 .venv/bin/python scripts/build_cv.py
 ```
 
-On another platform, pass `--font-dir /path/to/fonts` containing `Arial.ttf`, `Arial Bold.ttf`, and `Georgia Bold.ttf`. The script reads the shared JSON and writes the PDF into `public/`. Check both rendered pages after changing the text.
+The generator uses macOS system fonts by default. For another font directory, pass `--font-dir /path/to/fonts` containing `Arial.ttf`, `Arial Bold.ttf`, and `Georgia Bold.ttf`. Review both pages and commit the generated PDF.
 
 ## GitHub Pages
 
-The public website is hosted at [deysan.github.io/resume](https://deysan.github.io/resume/). Astro uses this site origin and the `/resume/` base path; asset links use Astro's `BASE_URL`.
+Astro uses `https://deysan.github.io` as the site origin and `/resume/` as the base path. Asset links use Astro's `BASE_URL`.
 
-`.github/workflows/pages.yml` checks formatting and builds pull requests. Pushes to `main` also publish the static `dist/` output through GitHub Actions. The workflow can be run manually from `main`. Repository Settings → Pages must use GitHub Actions as its source.
-
-The PDF includes this address as a Web resume link alongside Telegram and LinkedIn in one row on page two, configured by `pdf.webResumeUrl` in `src/data/resume.json`. Regenerate and commit the PDF when its content changes; deployment serves the committed file without requiring fonts or Python in CI.
+`.github/workflows/pages.yml` checks formatting and builds pull requests. Pushes to `main` publish `dist/` to GitHub Pages, including the committed PDF. The workflow can also be run manually from `main`. In repository Settings → Pages, select GitHub Actions as the source.
