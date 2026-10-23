@@ -1,0 +1,18 @@
+---
+import type { Resume } from "../../types/resume";
+
+type Props = Pick<Resume, "languages">;
+const resume = Astro.props;
+---
+
+<section class="card languages" aria-labelledby="languages-title">
+  <h2 id="languages-title">Languages</h2>
+  <dl>
+    {resume.languages.map((language) => (
+      <div>
+        <dt>{language.name}</dt>
+        <dd>{language.level}</dd>
+      </div>
+    ))}
+  </dl>
+</section>

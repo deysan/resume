@@ -1,0 +1,13 @@
+.skills {
+  background: var(--pale);
+}
+
+.skill-group + .skill-group {
+  margin-top: 24px;
+}
+
+.skill-group h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}

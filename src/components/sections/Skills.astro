@@ -1,0 +1,18 @@
+---
+import type { Resume } from "../../types/resume";
+import TagList from "../ui/TagList.astro";
+
+type Props = Pick<Resume, "skills">;
+const resume = Astro.props;
+---
+
+<section class="card skills" aria-labelledby="skills-title">
+  <p class="eyebrow">03 / What I work with</p>
+  <h2 id="skills-title">Skills & tools</h2>
+  {resume.skills.map((group) => (
+    <div class="skill-group">
+      <h3>{group.title}</h3>
+      <TagList items={group.items} />
+    </div>
+  ))}
+</section>

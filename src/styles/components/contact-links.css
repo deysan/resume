@@ -1,0 +1,21 @@
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  border: 1px solid #666;
+  border-radius: 100px;
+  padding: 13px 20px;
+  font-size: 15px;
+}
+
+.contact-links a:hover {
+  background: white;
+  color: #101010;
+  border-color: white;
+}

@@ -1,0 +1,19 @@
+---
+import type { Resume } from "../../types/resume";
+import ExperienceCard from "../ExperienceCard.astro";
+
+type Props = Pick<Resume, "experience">;
+const resume = Astro.props;
+---
+
+<section id="experience" aria-labelledby="experience-title">
+  <div class="section-heading">
+    <h2 id="experience-title">Experience</h2>
+    <span>02 / Where I’ve contributed</span>
+  </div>
+  <div class="experience-list">
+    {resume.experience.map((job, index) => (
+      <ExperienceCard job={job} index={index} />
+    ))}
+  </div>
+</section>

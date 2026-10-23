@@ -1,0 +1,19 @@
+.learning-list li + li {
+  margin-top: 20px;
+}
+
+.learning-list h4 {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 5px 0;
+}
+
+.learning-list p {
+  font-size: 13px;
+  color: #575757;
+}
+
+.learning-list .course-note {
+  margin-top: 7px;
+  font-size: 12px;
+}

@@ -1,0 +1,44 @@
+.impact-section {
+  margin-top: 48px;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.impact-card {
+  background: var(--pale);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.metric {
+  font-size: clamp(25px, 2.8vw, 40px);
+  letter-spacing: -1.6px;
+  line-height: 1.15;
+  color: var(--blue);
+  margin-bottom: 30px;
+  white-space: nowrap;
+}
+
+.impact-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.impact-card > p:last-child {
+  font-size: 14px;
+}
+
+.impact-accent {
+  background: var(--blue);
+  color: white;
+}
+
+.impact-accent .metric {
+  color: white;
+}

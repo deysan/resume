@@ -1,0 +1,24 @@
+---
+import type { Resume } from "../../types/resume";
+
+type Props = Pick<Resume, "impact">;
+const resume = Astro.props;
+---
+
+<section class="impact-section" aria-labelledby="impact-title">
+  <div class="section-heading">
+    <h2 id="impact-title">Selected impact</h2>
+    <span>From my work at Promova</span>
+  </div>
+  <div class="impact-grid">
+    {resume.impact.map((item, index) => (
+      <article
+        class:list={["card", "impact-card", { "impact-accent": index === 2 }]}
+      >
+        <p class="metric">{item.value}</p>
+        <h3>{item.title}</h3>
+        <p>{item.text}</p>
+      </article>
+    ))}
+  </div>
+</section>

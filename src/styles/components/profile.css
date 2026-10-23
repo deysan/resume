@@ -1,0 +1,41 @@
+.profile {
+  background: var(--blue);
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  padding: 40px;
+}
+
+.profile h2 {
+  font-size: 52px;
+  letter-spacing: -2px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.profile-summary {
+  font-size: 23px;
+  line-height: 1.45;
+  letter-spacing: -0.4px;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 35px;
+  padding-top: 26px;
+  border-top: 1px solid #ffffff55;
+}
+
+.focus-grid h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.focus-grid p {
+  font-size: 14px;
+  color: #edf0ff;
+}

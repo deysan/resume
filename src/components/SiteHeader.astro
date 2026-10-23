@@ -1,0 +1,18 @@
+---
+interface Props {
+  location: string;
+}
+const { location } = Astro.props;
+---
+
+<header class="masthead">
+  <a href="#main" aria-label="Andrii Deisan, top of page">
+    AD<span aria-hidden="true">.</span>
+  </a>
+  <span>
+    <span>
+      <span aria-hidden="true">🇺🇦</span> {location}
+    </span>
+    <span aria-hidden="true">↗</span>
+  </span>
+</header>

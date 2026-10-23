@@ -1,0 +1,20 @@
+---
+import type { Course } from "../types/resume";
+interface Props {
+  courses: Course[];
+}
+const { courses } = Astro.props;
+---
+
+<ul class="learning-list">
+  {courses.map((course) => (
+    <li>
+      <span class="date">{course.date}</span>
+      <h4>{course.title}</h4>
+      <p>{course.provider}</p>
+      {"note" in course && course.note && (
+        <p class="course-note">{course.note}</p>
+      )}
+    </li>
+  ))}
+</ul>

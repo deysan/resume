@@ -1,0 +1,22 @@
+.ai-tools {
+  background: #242424;
+  color: white;
+}
+
+.spark {
+  font-size: 55px;
+  color: #a9bbff;
+  line-height: 1;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.ai-tools p {
+  font-size: 15px;
+  color: #ddd;
+  margin: 22px 0;
+}
+
+.ai-tools .tags li {
+  border-color: #656565;
+}

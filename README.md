@@ -25,8 +25,12 @@ npm run preview
 ## Updating the content
 
 - `src/data/resume.json` — content shared by the website and PDF. The `pdf` field contains the PDF summary, skill grouping, and web resume URL.
-- `src/pages/index.astro` — page structure.
-- `src/styles/global.css` — styles and responsive layout.
+- `src/pages/index.astro` — composition of the page sections and columns.
+- `src/components/sections/` — Hero, Profile, Experience, Skills and other sections.
+- `src/components/` — shared contact links, experience cards, course lists, header and footer. `ui/` contains the tag list and CV download link.
+- `src/types/resume.ts` — component data types derived from the existing JSON.
+- `src/styles/global.css` — ordered stylesheet entry point; base styles, shared elements, page layout and component styles are separate files.
+- `src/styles/responsive.css` — shared breakpoint, print and reduced-motion overrides. These load last to preserve the cascade between cards, sections and the page grid.
 - `src/assets/andrii-deisan.jpg` — original website portrait. Astro generates responsive WebP images during the build.
 - `assets/cv-portrait.jpg` — optimized 400 × 400 JPEG portrait for the PDF.
 - `public/Andrii_Deisan_CV.pdf` — downloadable CV. Regenerate it after updating resume content.

@@ -1,0 +1,24 @@
+---
+import type { Resume } from "../../types/resume";
+
+type Props = Pick<Resume, "summary" | "focusAreas">;
+const resume = Astro.props;
+---
+
+<section class="card profile" aria-labelledby="profile-title">
+  <div>
+    <p class="eyebrow">01 / A little context</p>
+    <h2 id="profile-title">Profile</h2>
+  </div>
+  <div>
+    <p class="profile-summary">{resume.summary}</p>
+    <div class="focus-grid">
+      {resume.focusAreas.map((area) => (
+        <div>
+          <h3>{area.title}</h3>
+          <p>{area.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+---
+import type { Resume } from "../../types/resume";
+import TagList from "../ui/TagList.astro";
+
+type Props = Pick<Resume, "tools">;
+const resume = Astro.props;
+---
+
+<section class="card ai-tools" aria-labelledby="ai-title">
+  <span class="spark" aria-hidden="true">
+    ✳
+  </span>
+  <h2 id="ai-title">
+    AI-assisted.
+    <br />
+    Human-reviewed.
+  </h2>
+  <p>
+    I use AI-assisted workflows with engineering judgment, human review, and
+    validation.
+  </p>
+  <TagList items={resume.tools} />
+</section>

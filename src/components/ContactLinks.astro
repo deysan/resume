@@ -1,5 +1,7 @@
 ---
-import resume from "../data/resume.json";
+import type { Resume } from "../types/resume";
+type Props = Pick<Resume, "email" | "socials">;
+const resume = Astro.props;
 ---
 
 <ul class="contact-links">

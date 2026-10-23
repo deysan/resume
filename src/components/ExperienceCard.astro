@@ -1,0 +1,33 @@
+---
+import type { Experience } from "../types/resume";
+interface Props {
+  job: Experience;
+  index: number;
+}
+const { job, index } = Astro.props;
+---
+
+<article class="card job">
+  <div class="job-top">
+    <p class="company">{job.company}</p>
+    <span class="job-number" aria-hidden="true">
+      0{index + 1}
+    </span>
+  </div>
+  <h3>{job.role}</h3>
+  {job.focus && <p class="job-focus">{job.focus}</p>}
+  <p class="date">{job.dates}</p>
+  <ul class="job-bullets">
+    {job.bullets.map((bullet) => (
+      <li>{bullet}</li>
+    ))}
+  </ul>
+  {job.workAccount && (
+    <p class="work-account">
+      During my time at Promova, I contributed through my work account:{" "}
+      <a href={job.workAccount}>
+        @adeisan <span aria-hidden="true">↗</span>
+      </a>
+    </p>
+  )}
+</article>

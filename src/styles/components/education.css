@@ -1,0 +1,40 @@
+.degree {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ddd;
+}
+
+.degree h3 {
+  font-size: 19px;
+  margin: 10px 0 5px;
+}
+
+.degree > p:not(.date) {
+  font-size: 15px;
+}
+
+.degree .institution {
+  margin-top: 10px;
+  color: #595959;
+}
+
+.learning-heading {
+  font-size: 17px;
+  margin: 25px 0;
+}
+
+.education details {
+  border-top: 1px solid #ddd;
+  margin-top: 24px;
+  padding-top: 20px;
+}
+
+.education summary {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.education details[open] summary {
+  margin-bottom: 20px;
+}

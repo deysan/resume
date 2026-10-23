@@ -1,0 +1,27 @@
+---
+import type { Resume } from "../../types/resume";
+import LearningList from "../LearningList.astro";
+
+type Props = Pick<Resume, "education" | "learning" | "moreLearning">;
+const resume = Astro.props;
+---
+
+<section class="card education" aria-labelledby="education-title">
+  <p class="eyebrow">04 / Always learning</p>
+  <h2 id="education-title">
+    Education
+    <br />& learning
+  </h2>
+  <div class="degree">
+    <p class="date">{resume.education.dates}</p>
+    <h3>{resume.education.degree}</h3>
+    <p>{resume.education.field}</p>
+    <p class="institution">{resume.education.institution}</p>
+  </div>
+  <h3 class="learning-heading">Selected learning</h3>
+  <LearningList courses={resume.learning} />
+  <details>
+    <summary>More courses & conferences</summary>
+    <LearningList courses={resume.moreLearning} />
+  </details>
+</section>

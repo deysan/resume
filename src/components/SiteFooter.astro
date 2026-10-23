@@ -1,0 +1,14 @@
+---
+import DownloadCvLink from "./ui/DownloadCvLink.astro";
+interface Props {
+  name: string;
+  updated: string;
+}
+const { name, updated } = Astro.props;
+---
+
+<footer>
+  <span>© {name}</span>
+  <span>Updated {updated}</span>
+  <DownloadCvLink />
+</footer>

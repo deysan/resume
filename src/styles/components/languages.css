@@ -1,0 +1,30 @@
+.languages {
+  background: var(--pale);
+}
+
+.languages h2 {
+  font-size: 28px;
+}
+
+.languages dl {
+  margin: 24px 0 0;
+}
+
+.languages dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.languages dl > div + div {
+  border-top: 1px solid #bdc8e1;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.languages dd {
+  margin: 0;
+  color: #435177;
+  text-align: right;
+}
