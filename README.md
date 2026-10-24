@@ -31,7 +31,7 @@ npm run preview
 - `src/types/resume.ts` — component data types derived from the existing JSON.
 - `src/styles/global.css` — ordered stylesheet entry point; base styles, shared elements, page layout and component styles are separate files.
 - `src/styles/responsive.css` — shared breakpoint, print and reduced-motion overrides. `src/styles/motion-design.css` loads afterward for the role display, icons and motion-related layout.
-- `src/scripts/` — scroll effects and role typing; see [motion and icons](docs/motion.md).
+- `src/scripts/` — scroll effects and role typing.
 - `src/assets/andrii-deisan.jpg` — original website portrait. Astro generates responsive WebP images during the build.
 - `assets/cv-portrait.jpg` — optimized 400 × 400 JPEG portrait for the PDF.
 - `public/Andrii_Deisan_CV.pdf` — downloadable CV. Regenerate it after updating resume content.

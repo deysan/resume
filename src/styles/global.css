@@ -1,5 +1,4 @@
-/* Ordered entry point. Shared responsive rules come last to preserve the
-   existing cascade across cards, sections and the page grid. */
+/* Base and component styles, followed by responsive and motion overrides. */
 @import "./base.css";
 @import "./shared.css";
 @import "./layout.css";

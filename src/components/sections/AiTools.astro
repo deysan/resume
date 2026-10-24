@@ -1,15 +1,14 @@
 ---
 import type { Resume } from "../../types/resume";
 import TagList from "../ui/TagList.astro";
+import Icon from "../ui/Icon.astro";
 
 type Props = Pick<Resume, "tools">;
 const resume = Astro.props;
 ---
 
 <section class="card ai-tools" aria-labelledby="ai-title">
-  <span class="spark" aria-hidden="true">
-    ✳
-  </span>
+  <Icon name="star-2-linear" class="spark" />
   <h2 id="ai-title">
     AI-assisted.
     <br />
