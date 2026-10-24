@@ -16,7 +16,8 @@ const resume = Astro.props;
       <article
         class:list={["card", "impact-card", { "impact-accent": index === 2 }]}
       >
-        <p class="metric" aria-label={item.value}>
+        <p class="metric">
+          <span class="sr-only">{item.value}</span>
           <span class="metric-display" aria-hidden="true">
             {item.value.split(" → ").map((part, index) => (
               <>

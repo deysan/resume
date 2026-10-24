@@ -14,12 +14,19 @@ export function initializeRoles(signal: AbortSignal) {
     "Full Stack Engineer",
     "Frontend Engineer",
   ];
+  let previousRole = "";
+  let previousCount = -1;
   const render = (role: string, count: number) => {
+    if (role === previousRole && count === previousCount) return;
+    previousRole = role;
+    previousCount = count;
     const split = role.lastIndexOf(" ");
-    first.textContent = role.slice(0, Math.min(count, split));
-    second.textContent = count > split ? role.slice(split + 1, count) : "";
-    firstDot.hidden = count > split;
-    secondDot.hidden = count <= split;
+    const firstText = role.slice(0, Math.min(count, split));
+    const secondText = count > split ? role.slice(split + 1, count) : "";
+    if (first.textContent !== firstText) first.textContent = firstText;
+    if (second.textContent !== secondText) second.textContent = secondText;
+    if (firstDot.hidden !== count > split) firstDot.hidden = count > split;
+    if (secondDot.hidden !== count <= split) secondDot.hidden = count <= split;
   };
   let inView = false;
   const cursor = { count: roles[0].length };

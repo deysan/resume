@@ -28,6 +28,13 @@ function initializeMotion() {
     gsap.ticker.add(tick);
     gsap.ticker.lagSmoothing(0);
 
+    // Read all positions before any entrance animation writes styles.
+    const offscreenBlocks = Array.from(
+      document.querySelectorAll<HTMLElement>(
+        ".profile, .impact-card, .job, .sidebar > section, .contact",
+      ),
+    ).filter((block) => block.getBoundingClientRect().top > window.innerHeight);
+
     // Keep the compact hero fully readable throughout its entrance.
     const intro = gsap.timeline({
       defaults: { ease: "power3.out", duration: 0.85 },
@@ -36,30 +43,23 @@ function initializeMotion() {
       .from(".hero-copy", { y: 12 }, 0)
       .from(".hero-actions", { y: 12 }, 0.16);
 
-    // Prepare only offscreen blocks, before they enter the viewport. No nested
-    // heading tweens or visible → hidden jumps when the trigger starts.
-    document
-      .querySelectorAll<HTMLElement>(
-        ".profile, .impact-card, .job, .sidebar > section, .contact",
-      )
-      .forEach((block) => {
-        if (block.getBoundingClientRect().top <= window.innerHeight) return;
-        gsap.fromTo(
-          block,
-          { y: 38, opacity: 0.12 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            delay: block.matches(".impact-card")
-              ? Array.from(block.parentElement!.children).indexOf(block) * 0.12
-              : 0,
-            ease: "power3.out",
-            clearProps: "transform,opacity",
-            scrollTrigger: { trigger: block, start: "top 92%", once: true },
-          },
-        );
-      });
+    // Move offscreen blocks into place without reducing text contrast.
+    offscreenBlocks.forEach((block) => {
+      gsap.fromTo(
+        block,
+        { y: 38 },
+        {
+          y: 0,
+          duration: 1,
+          delay: block.matches(".impact-card")
+            ? Array.from(block.parentElement!.children).indexOf(block) * 0.12
+            : 0,
+          ease: "power3.out",
+          clearProps: "transform",
+          scrollTrigger: { trigger: block, start: "top 92%", once: true },
+        },
+      );
+    });
 
     gsap.to(".reading-progress", {
       scaleX: 1,
