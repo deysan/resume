@@ -16,7 +16,8 @@
 
 .profile-summary {
   font-size: 23px;
-  line-height: 1.45;
+  line-height: 1.55;
+  text-wrap: pretty;
   letter-spacing: -0.4px;
 }
 

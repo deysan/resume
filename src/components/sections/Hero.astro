@@ -2,11 +2,15 @@
 import type { Resume } from "../../types/resume";
 import ContactLinks from "../ContactLinks.astro";
 import DownloadCvLink from "../ui/DownloadCvLink.astro";
+import Icon from "../ui/Icon.astro";
+import RotatingRole from "../ui/RotatingRole.astro";
 import { Image } from "astro:assets";
 import portrait from "../../assets/andrii-deisan.jpg";
 
 type Props = Pick<Resume, "name" | "focus" | "intro" | "email" | "socials">;
 const resume = Astro.props;
+const nameParts = resume.name.split(" ");
+const surname = nameParts.pop();
 ---
 
 <section class="hero" aria-labelledby="name">
@@ -27,27 +31,28 @@ const resume = Astro.props;
     </div>
     <div class="card hero-copy">
       <p class="eyebrow">{resume.focus}</p>
-      <p class="hero-role">
-        Product
-        <br />
-        Engineer<span aria-hidden="true">.</span>
-      </p>
+      <RotatingRole />
       <p class="intro">{resume.intro}</p>
     </div>
     <div class="card hero-actions">
       <span class="hero-arrow" aria-hidden="true">
-        ↘
+        <Icon name="arrow-right-down-linear" />
       </span>
       <div>
         <p class="eyebrow">The full picture</p>
         <DownloadCvLink variant="button" />
         <a class="text-link" href="#experience">
-          View experience <span aria-hidden="true">↙</span>
+          View experience{" "}
+          <span aria-hidden="true">
+            <Icon name="arrow-left-down-linear" />
+          </span>
         </a>
       </div>
     </div>
   </div>
-  <h1 id="name">{resume.name}</h1>
+  <h1 id="name">
+    {nameParts.join(" ")} <span class="surname">{surname}</span>
+  </h1>
   <nav aria-label="Contact and social profiles">
     <ContactLinks email={resume.email} socials={resume.socials} />
   </nav>

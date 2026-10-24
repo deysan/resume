@@ -1,4 +1,5 @@
 ---
+import Icon from "../ui/Icon.astro";
 import type { Resume } from "../../types/resume";
 
 type Props = Pick<Resume, "impact">;
@@ -15,7 +16,18 @@ const resume = Astro.props;
       <article
         class:list={["card", "impact-card", { "impact-accent": index === 2 }]}
       >
-        <p class="metric">{item.value}</p>
+        <p class="metric" aria-label={item.value}>
+          <span class="metric-display" aria-hidden="true">
+            {item.value.split(" → ").map((part, index) => (
+              <>
+                {index > 0 && (
+                  <Icon name="arrow-right-linear" class="metric-arrow" />
+                )}
+                <span>{part}</span>
+              </>
+            ))}
+          </span>
+        </p>
         <h3>{item.title}</h3>
         <p>{item.text}</p>
       </article>

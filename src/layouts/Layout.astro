@@ -23,9 +23,13 @@ const description =
     <title>{resume.name} · {resume.role}</title>
   </head>
   <body>
+    <div class="reading-progress" aria-hidden="true"></div>
     <a class="skip-link" href="#main">
       Skip to content
     </a>
     <slot />
+    <script>
+      import "../scripts/motion";
+    </script>
   </body>
 </html>

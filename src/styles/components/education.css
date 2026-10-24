@@ -29,10 +29,30 @@
 }
 
 .education summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  list-style: none;
   cursor: pointer;
   font-size: 13px;
   font-weight: 600;
   line-height: 1.5;
+  min-height: 44px;
+  padding: 12px 0;
+  color: var(--blue);
+}
+
+.education summary::-webkit-details-marker {
+  display: none;
+}
+
+.education summary .icon {
+  transition: transform var(--motion-duration) var(--motion-ease);
+}
+
+.education details[open] summary .icon {
+  transform: rotate(180deg);
 }
 
 .education details[open] summary {

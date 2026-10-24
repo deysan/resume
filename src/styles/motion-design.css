@@ -1,0 +1,118 @@
+/* Role display, unified icons, and screen/print refinements. */
+.icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+.icon-inline {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: -0.22em;
+}
+.work-account a,
+.download-text {
+  white-space: nowrap;
+}
+.metric-display {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.16em;
+}
+.metric-arrow {
+  width: 0.72em;
+  height: 0.72em;
+}
+.role-display {
+  position: relative;
+  width: 100%;
+}
+.hero-role .role-row {
+  display: block;
+  height: 1em;
+  white-space: nowrap;
+}
+.hero-role .role-first,
+.hero-role .role-second {
+  color: var(--blue);
+}
+.hero h1 .surname {
+  color: #a9bbff;
+}
+@media screen {
+  .reading-progress {
+    position: fixed;
+    z-index: 30;
+    inset: 0 0 auto;
+    height: 3px;
+    background: #a9bbff;
+    transform: scaleX(0);
+    transform-origin: left;
+    pointer-events: none;
+  }
+  .hero-arrow .icon {
+    width: 96px;
+    height: 96px;
+  }
+  .hero-role {
+    font-size: clamp(42px, 5.2vw, 74px);
+  }
+  .profile {
+    padding: clamp(28px, 4vw, 48px);
+  }
+  .profile-summary {
+    font-size: clamp(20px, 2.05vw, 28px);
+  }
+  .impact-card .metric {
+    font-variant-numeric: tabular-nums;
+  }
+  .job-bullets li {
+    font-size: 15px;
+  }
+  .contact h2 {
+    font-size: clamp(36px, 5.5vw, 78px);
+    letter-spacing: -0.055em;
+    max-width: 9ch;
+  }
+  @media (max-width: 1100px) {
+    .hero-arrow .icon {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  @media (max-width: 760px) {
+    .hero-role {
+      font-size: clamp(30px, 6vw, 46px);
+    }
+    .hero-arrow .icon {
+      width: 40px;
+      height: 40px;
+    }
+    .contact h2 {
+      font-size: clamp(36px, 10vw, 64px);
+    }
+  }
+  @media (max-width: 450px) {
+    .hero-role {
+      font-size: clamp(40px, 13vw, 56px);
+    }
+    .job-bullets li {
+      font-size: 14px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reading-progress {
+      display: none;
+    }
+  }
+}
+@media print {
+  .reading-progress,
+  .hero-role .role-row {
+    display: none !important;
+  }
+  .hero-role::after {
+    content: "Product Engineer.";
+  }
+}

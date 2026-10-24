@@ -23,11 +23,43 @@
   font-size: 14px;
   font-weight: 600;
   min-height: 50px;
-  transition: transform 0.18s;
+  transition:
+    transform var(--motion-duration) var(--motion-ease),
+    box-shadow var(--motion-duration) var(--motion-ease);
 }
 
 .button:hover {
-  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button span,
+.text-link span,
+.contact-links a span {
+  transition: transform var(--motion-duration) var(--motion-ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgb(16 16 16 / 12%);
+  }
+
+  .text-link:hover span {
+    transform: translate(-2px, 2px);
+  }
+
+  .contact-links a:hover span {
+    transform: translate(2px, -2px);
+  }
+
+  .button:active {
+    transform: translateY(1px);
+    box-shadow: none;
+  }
 }
 
 .button-blue {
@@ -46,6 +78,8 @@
   justify-content: space-between;
   gap: 16px;
   margin-top: 24px;
+  min-height: 44px;
+  align-items: center;
 }
 
 .section-heading {

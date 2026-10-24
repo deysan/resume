@@ -265,6 +265,13 @@
   *::after {
     transition: none !important;
   }
+  .button:hover,
+  .button:active,
+  .button:hover span,
+  .text-link:hover span,
+  .contact-links a:hover span {
+    transform: none;
+  }
 }
 
 @media print {

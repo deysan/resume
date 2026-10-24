@@ -12,9 +12,15 @@
   border-radius: 100px;
   padding: 13px 20px;
   font-size: 15px;
+  min-height: 44px;
+  transition:
+    background-color var(--motion-duration) var(--motion-ease),
+    color var(--motion-duration) var(--motion-ease),
+    border-color var(--motion-duration) var(--motion-ease);
 }
 
 .contact-links a:hover {
+  text-decoration: none;
   background: white;
   color: #101010;
   border-color: white;

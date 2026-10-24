@@ -1,4 +1,5 @@
 ---
+import Icon from "./ui/Icon.astro";
 import type { Experience } from "../types/resume";
 interface Props {
   job: Experience;
@@ -26,7 +27,7 @@ const { job, index } = Astro.props;
     <p class="work-account">
       During my time at Promova, I contributed through my work account:{" "}
       <a href={job.workAccount}>
-        @adeisan <span aria-hidden="true">↗</span>
+        @adeisan <Icon name="arrow-right-up-linear" class="icon-inline" />
       </a>
     </p>
   )}

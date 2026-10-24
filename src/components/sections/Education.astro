@@ -1,6 +1,7 @@
 ---
 import type { Resume } from "../../types/resume";
 import LearningList from "../LearningList.astro";
+import Icon from "../ui/Icon.astro";
 
 type Props = Pick<Resume, "education" | "learning" | "moreLearning">;
 const resume = Astro.props;
@@ -21,7 +22,9 @@ const resume = Astro.props;
   <h3 class="learning-heading">Selected learning</h3>
   <LearningList courses={resume.learning} />
   <details>
-    <summary>More courses & conferences</summary>
+    <summary>
+      More courses & conferences <Icon name="alt-arrow-down-linear" />
+    </summary>
     <LearningList courses={resume.moreLearning} />
   </details>
 </section>

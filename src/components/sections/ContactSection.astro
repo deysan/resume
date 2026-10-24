@@ -1,6 +1,7 @@
 ---
 import type { Resume } from "../../types/resume";
 import ContactLinks from "../ContactLinks.astro";
+import Icon from "../ui/Icon.astro";
 
 type Props = Pick<Resume, "email" | "socials">;
 const resume = Astro.props;
@@ -9,16 +10,17 @@ const resume = Astro.props;
 <section class="card contact" aria-labelledby="contact-title">
   <div>
     <p class="eyebrow">Let’s talk</p>
-    <h2 id="contact-title">
-      Let’s connect<span aria-hidden="true">↗</span>
-    </h2>
+    <h2 id="contact-title">Let’s connect</h2>
     <p>
       Interested in my experience? Get in touch, or download my CV for a concise
       overview.
     </p>
   </div>
   <a class="button button-light" href={`mailto:${resume.email}`}>
-    Say hello <span aria-hidden="true">↗</span>
+    Say hello{" "}
+    <span aria-hidden="true">
+      <Icon name="arrow-right-up-linear" />
+    </span>
   </a>
   <nav aria-label="Get in touch">
     <ContactLinks email={resume.email} socials={resume.socials} />
