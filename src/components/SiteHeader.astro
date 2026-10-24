@@ -1,4 +1,5 @@
 ---
+import Icon from "./ui/Icon.astro";
 interface Props {
   location: string;
 }
@@ -13,6 +14,6 @@ const { location } = Astro.props;
     <span>
       <span aria-hidden="true">🇺🇦</span> {location}
     </span>
-    <span aria-hidden="true">↗</span>
+    <Icon name="arrow-right-up-linear" />
   </span>
 </header>

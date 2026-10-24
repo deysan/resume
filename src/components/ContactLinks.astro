@@ -1,5 +1,6 @@
 ---
 import type { Resume } from "../types/resume";
+import Icon from "./ui/Icon.astro";
 type Props = Pick<Resume, "email" | "socials">;
 const resume = Astro.props;
 ---
@@ -8,14 +9,18 @@ const resume = Astro.props;
   <li>
     <a href={`mailto:${resume.email}`}>
       {resume.email}
-      <span aria-hidden="true">↗</span>
+      <span aria-hidden="true">
+        <Icon name="arrow-right-up-linear" />
+      </span>
     </a>
   </li>
   {resume.socials.map((link) => (
     <li>
       <a href={link.url}>
         {link.label}
-        <span aria-hidden="true">↗</span>
+        <span aria-hidden="true">
+          <Icon name="arrow-right-up-linear" />
+        </span>
       </a>
     </li>
   ))}

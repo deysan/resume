@@ -6,6 +6,8 @@
   --blue: #2445ed;
   --pale: #e1e9ff;
   --radius: 28px;
+  --motion-duration: 180ms;
+  --motion-ease: cubic-bezier(0.2, 0.7, 0.3, 1);
 }
 
 * {

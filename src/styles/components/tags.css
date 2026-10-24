@@ -6,6 +6,7 @@
 
 .tags li {
   border: 1px solid #b5bfda;
+  background: rgb(255 255 255 / 24%);
   border-radius: 100px;
   padding: 8px 12px;
   font-size: 13px;

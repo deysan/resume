@@ -50,7 +50,7 @@
 .hero-role {
   font-size: clamp(42px, 5.5vw, 78px);
   letter-spacing: -4px;
-  line-height: 0.95;
+  line-height: 1;
   text-transform: uppercase;
   color: var(--blue);
   font-weight: 500;
@@ -63,6 +63,8 @@
 .intro {
   font-size: 16px;
   max-width: 450px;
+  color: #3d3d3d;
+  text-wrap: pretty;
 }
 
 .hero-actions {

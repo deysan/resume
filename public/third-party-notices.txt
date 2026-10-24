@@ -1,0 +1,7 @@
+Solar interface icons
+Copyright / author: 480 Design
+Source: https://www.figma.com/community/file/1166831539721848736
+Distribution: https://icon-sets.iconify.design/solar/
+License: Creative Commons Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/
+Used via @iconify-json/solar. Adaptations: color and display size.

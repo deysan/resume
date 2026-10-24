@@ -1,0 +1,27 @@
+---
+import solar from "@iconify-json/solar/icons.json";
+
+interface Props {
+  name:
+    | "arrow-right-up-linear"
+    | "arrow-left-down-linear"
+    | "arrow-down-linear"
+    | "arrow-right-down-linear"
+    | "arrow-right-linear"
+    | "alt-arrow-down-linear";
+  class?: string;
+}
+const { name, class: className } = Astro.props;
+const icon = solar.icons[name];
+---
+
+<svg
+  class:list={["icon", className]}
+  viewBox="0 0 24 24"
+  width="24"
+  height="24"
+  fill="none"
+  aria-hidden="true"
+  focusable="false"
+  set:html={icon.body}
+/>
