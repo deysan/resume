@@ -10,6 +10,7 @@ import Skills from "../components/sections/Skills.astro";
 import AiTools from "../components/sections/AiTools.astro";
 import Education from "../components/sections/Education.astro";
 import Languages from "../components/sections/Languages.astro";
+import Projects from "../components/sections/Projects.astro";
 import ContactSection from "../components/sections/ContactSection.astro";
 import resume from "../data/resume.json";
 ---
@@ -40,6 +41,7 @@ import resume from "../data/resume.json";
           <Languages languages={resume.languages} />
         </div>
       </div>
+      <Projects />
       <ContactSection email={resume.email} socials={resume.socials} />
     </main>
     <SiteFooter name={resume.name} updated={resume.updated} />

@@ -31,7 +31,7 @@ function initializeMotion() {
     // Read all positions before any entrance animation writes styles.
     const offscreenBlocks = Array.from(
       document.querySelectorAll<HTMLElement>(
-        ".profile, .impact-card, .job, .sidebar > section, .contact",
+        ".profile, .impact-card, .job, .sidebar > section, .project-card, .contact",
       ),
     ).filter((block) => block.getBoundingClientRect().top > window.innerHeight);
 
