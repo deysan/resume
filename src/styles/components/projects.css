@@ -2,6 +2,11 @@
   margin-top: 56px;
 }
 
+.project-list {
+  display: grid;
+  gap: 24px;
+}
+
 .card.project-card {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -22,6 +27,16 @@
   height: auto;
 }
 
+.project-preview-top {
+  background: #f5f5f3;
+}
+
+.project-preview-top img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .project-copy {
   padding: clamp(28px, 3vw, 48px);
   align-self: center;
@@ -38,6 +53,12 @@
   letter-spacing: -1.5px;
 }
 
+.project-subtitle {
+  margin: -8px 0 20px;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+}
+
 .project-description {
   font-size: 18px;
 }
@@ -45,6 +66,19 @@
 .project-detail {
   margin: 14px 0 24px;
   font-size: 14px;
+  color: #515151;
+}
+
+.project-testing {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #515151;
+}
+
+.project-note,
+.project-access {
+  margin-top: 10px;
+  font-size: 12px;
   color: #515151;
 }
 

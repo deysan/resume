@@ -11,38 +11,61 @@ import TagList from "../ui/TagList.astro";
   aria-labelledby="projects-title"
 >
   <div class="section-heading">
-    <h2 id="projects-title">Featured project</h2>
+    <h2 id="projects-title">Featured projects</h2>
     <span>From idea to interaction</span>
   </div>
-  {projects.map((project) => (
-    <article class="card project-card">
-      <div class="project-preview">
-        <Image
-          src={project.image}
-          alt={project.imageAlt}
-          widths={[480, 720, 1280]}
-          sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1440px) 48vw, 640px"
-          format="webp"
-          quality={85}
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-      <div class="project-copy">
-        <p class="eyebrow">{project.category}</p>
-        <h3>{project.name}</h3>
-        <p class="project-description">{project.description}</p>
-        <p class="project-detail">{project.detail}</p>
-        <TagList items={project.technologies} />
-        <div class="project-actions">
-          <a class="button button-blue" href={project.demo}>
-            Try live demo <Icon name="arrow-right-up-linear" />
-          </a>
-          <a class="project-source" href={project.repository}>
-            View on GitHub <Icon name="arrow-right-up-linear" />
-          </a>
+  <div class="project-list">
+    {projects.map((project) => (
+      <article
+        class="card project-card"
+        aria-labelledby={`project-${project.id}`}
+      >
+        <div
+          class:list={[
+            "project-preview",
+            { "project-preview-top": project.imageFocus === "top" },
+          ]}
+        >
+          <Image
+            src={project.image}
+            alt={project.imageAlt}
+            widths={[480, 720, 1280]}
+            sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1440px) 48vw, 640px"
+            format="webp"
+            quality={85}
+            loading="lazy"
+            decoding="async"
+          />
         </div>
-      </div>
-    </article>
-  ))}
+        <div class="project-copy">
+          <p class="eyebrow">{project.category}</p>
+          <h3 id={`project-${project.id}`}>{project.name}</h3>
+          {project.subtitle && (
+            <p class="project-subtitle">{project.subtitle}</p>
+          )}
+          <p class="project-description">{project.description}</p>
+          <p class="project-detail">{project.detail}</p>
+          <TagList items={project.technologies} />
+          {project.testing && <p class="project-testing">{project.testing}</p>}
+          {project.note && <p class="project-note">{project.note}</p>}
+          <div class="project-actions">
+            <a class="button button-blue" href={project.demo}>
+              Try live demo <Icon name="arrow-right-up-linear" />
+            </a>
+            {project.report && (
+              <a class="project-source" href={project.report.url}>
+                View report <Icon name="arrow-right-up-linear" />
+              </a>
+            )}
+            <a class="project-source" href={project.repository}>
+              View on GitHub <Icon name="arrow-right-up-linear" />
+            </a>
+          </div>
+          {project.report && (
+            <p class="project-access">{project.report.access}</p>
+          )}
+        </div>
+      </article>
+    ))}
+  </div>
 </section>
