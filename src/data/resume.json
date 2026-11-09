@@ -1,12 +1,12 @@
 {
   "name": "Andrii Deisan",
   "role": "Product Engineer",
-  "focus": "Frontend-focused",
+  "focus": "Product-minded",
   "location": "Ukraine",
   "email": "ideysan@gmail.com",
   "updated": "October 2026",
-  "intro": "I build web products with React, Next.js, and TypeScript — from personalized journeys and checkout to tools that help teams work faster.",
-  "summary": "I’m a Product Engineer with a strong frontend focus and 4+ years of experience building web products. My work spans experimentation, personalization, e-commerce, and internal tooling. I collaborate with product, design, backend, and ML teams, combining product context with attention to performance, testing, and maintainability.",
+  "intro": "I build web products that improve user journeys and help teams work faster.",
+  "summary": "I’m a software engineer with 4+ years of experience building web products. I work closely with product, design, and engineering teams to turn user needs and business goals into practical solutions. My work spans experimentation, personalized journeys, checkout, and internal tools, with attention to usability, performance, testing, and maintainability.",
   "socials": [
     {
       "label": "LinkedIn",
@@ -56,7 +56,7 @@
     {
       "company": "Promova",
       "role": "Full-Stack Engineer",
-      "focus": "Frontend-focused",
+      "focus": "",
       "dates": "Feb 2025 — Aug 2026",
       "bullets": [
         "Developed marketing funnels, personalized components, conditional flows, and AI Tutor frontend features with product, design, backend, and ML colleagues.",
@@ -229,7 +229,7 @@
   ],
   "pdf": {
     "webResumeUrl": "https://deysan.github.io/resume/",
-    "summary": "Product Engineer with a strong frontend focus and 4+ years building web products with React, Next.js and TypeScript. Develops funnels, personalized journeys and checkout, combining engineering judgment with product context. Experience spans testing, performance, CMS automation and targeted server-side changes. Uses AI-assisted workflows with human review and validation.",
+    "summary": "Product Engineer with 4+ years building web products, connecting technical implementation with user needs and business goals. Develops funnels, personalized journeys and checkout, combining engineering judgment with product context. Experience spans testing, performance, CMS automation and targeted server-side changes. Uses AI-assisted workflows with human review and validation.",
     "skillRows": [
       ["React · Next.js", "Strapi · CMS tooling"],
       ["TypeScript · JavaScript", "GrowthBook · A/B testing"],
