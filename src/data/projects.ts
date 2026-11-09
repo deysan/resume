@@ -47,7 +47,7 @@ export const projects: Project[] = [
     repository: "https://github.com/deysan/unicorn-funnel-analytics",
     demo: "https://unicorn-demo.unicorn-deysan.workers.dev/",
     report: {
-      url: "https://unicorn-demo.unicorn-deysan.workers.dev/report?from=2026-11-01&to=2026-11-01",
+      url: "https://unicorn-demo.unicorn-deysan.workers.dev/report",
       access: "Read-only access: demo / unicorn-demo",
     },
   },
